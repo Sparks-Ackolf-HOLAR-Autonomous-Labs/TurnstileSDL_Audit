@@ -1,0 +1,26 @@
+{
+ "note": "Outcomes from the campaign ledger; hindcasts H1-H9 only. Tolerances fixed before any theorist answer was read.",
+ "H1":  {"category": "below", "value": 30.3, "tol_abs": 10.0, "source": "ledger seq 59-61; nano_sigec/small_sic/md_results.json"},
+ "H1b": {"category": "higher", "value": 9.0, "tol_abs": 7.0, "source": "ledger seq 61 analysis: particle+Si-rich runs 4-14% above bare alloy (midpoint 9)"},
+ "H2":  {"category": "physics", "value": 11.5, "tol_logratio": 0.2, "source": "ledger seq 19, 26-29"},
+ "H3":  {"category": "0.4<=x<=0.6", "value": 4.95, "tol_logratio": 0.1, "source": "ledger seq 34-38; refit minimum x=0.505"},
+ "H4":  {"category": "rises with length", "value": 1.42, "tol_abs": 0.2, "source": "phase_c/production/FAULT_STUDY.md, 0.48 -> 0.68 W/mK"},
+ "H5":  {"category": "agree within 30 %", "value": 1.7, "tol_abs": 0.3, "source": "gpumd/production_v2 (300 K Si 269-343 vs 160.5; 1100 K Si 1.23x, Ge 1.16x)"},
+ "H6":  {"category": "SiC precipitate favoured", "value": 1.55, "tol_abs": 0.3, "source": "nano_sigec/m1c/m1c_summary.json x=0.2; Si-neighbour preference 0.21 eV"},
+ "H7":  {"category": "increase", "value": 12.0, "tol_abs": 8.0, "source": "p3_strain/RESULTS.md; in-plane unchanged within error"},
+ "H8":  {"category": "below 0.7", "value": 0.50, "tol_abs": 0.15, "source": "party5_databases/open_db (median 0.50, 12 papers)"},
+ "H9":  {"category": "cap suppresses the change", "value": 50.0, "tol_abs": 25.0, "source": "p4_tskg/T3_insitu (Attiaoui et al. arXiv:2609.17504)"},
+ "baselines": {
+  "note": "data-only rules a campaign without a theorist would use",
+  "H1":  {"category": "inside", "value": 57.5, "rule": "midpoint of the continuum bracket"},
+  "H1b": {"category": "lower", "value": -30.0, "rule": "particle effect alone, zone ignored (same as H1 MD order)"},
+  "H2":  {"category": "fault", "value": 4.5, "rule": "trust the law and the detector; carry x=0.90 value"},
+  "H3":  {"category": "0.4<=x<=0.6", "value": 5.39, "rule": "linear interpolation x=0.5 to 0.85 at 1100 K; grid argmin x=0.5"},
+  "H4":  {"category": "size-independent", "value": 1.0, "rule": "amorphous = no long-lived phonons"},
+  "H5":  {"category": "agree within 30 %", "value": 1.0, "rule": "methods assumed to agree for a pure crystal"},
+  "H6":  {"category": null, "value": null, "rule": "no data-only rule"},
+  "H7":  {"category": "no change within 5 %", "value": 0.0, "rule": "kappa of the relaxed bulk"},
+  "H8":  {"category": "above 0.9", "value": 1.0, "rule": "database rows read as bulk"},
+  "H9":  {"category": null, "value": null, "rule": "no data-only rule"}
+ }
+}

@@ -1,0 +1,659 @@
+{
+ "verifier": "paper/figure_code/verify_record.py",
+ "record_files_copied": 2959,
+ "clean": {
+  "exit": 0,
+  "seconds": 1.1,
+  "n_checks": 100,
+  "n_pass": 100,
+  "crashed": false,
+  "failing": [],
+  "caught": false
+ },
+ "clean_after_mutations": {
+  "exit": 0,
+  "seconds": 0.85,
+  "n_checks": 100,
+  "n_pass": 100,
+  "crashed": false,
+  "failing": [],
+  "caught": false
+ },
+ "mutations": [
+  {
+   "id": "1a",
+   "no": 1,
+   "kind": "flip one byte in a committed raw output file",
+   "model": "outside edit",
+   "location": "first raw file of gpumd/production (endpoint v1)",
+   "desc": "one bit flipped in the middle of the file",
+   "exit": 1,
+   "seconds": 1.03,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[endpoint v1] batch S0-alloy-crosscheck: 21 raw files re-hash and tracked"
+   ],
+   "caught": true
+  },
+  {
+   "id": "1b",
+   "no": 1,
+   "kind": "flip one byte in a committed raw output file",
+   "model": "outside edit",
+   "location": "nano_sigec/small_sic/r50/results (first file, ledger 108)",
+   "desc": "one bit flipped in the middle of the file",
+   "exit": 1,
+   "seconds": 1.11,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[small SiC] batch embedded-SiC-MD-r50: 20 raw files re-hash and tracked"
+   ],
+   "caught": true
+  },
+  {
+   "id": "1c",
+   "no": 1,
+   "kind": "raw output file dropped from version control",
+   "model": "outside edit",
+   "location": "first raw file of gpumd/sizefree (size-free HNEMD)",
+   "desc": "file content unchanged, removed from the git index and matched by a new ignore rule",
+   "exit": 1,
+   "seconds": 1.04,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[size-free HNEMD] batch H1-300K: 270 raw files re-hash and tracked"
+   ],
+   "caught": true
+  },
+  {
+   "id": "2a",
+   "no": 2,
+   "kind": "edit a payload field in a middle ledger entry without rehashing",
+   "model": "outside edit",
+   "location": "ledger 61 (small-SiC decision), field 'decision'",
+   "desc": "decision text changed, entry hash left as committed",
+   "exit": 1,
+   "seconds": 1.1,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries"
+   ],
+   "caught": true
+  },
+  {
+   "id": "2b",
+   "no": 2,
+   "kind": "edit a payload field in a middle ledger entry without rehashing",
+   "model": "outside edit",
+   "location": "ledger 110 (r50 decision), field 'target'",
+   "desc": "target text changed, entry hash left as committed",
+   "exit": 1,
+   "seconds": 1.08,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries"
+   ],
+   "caught": true
+  },
+  {
+   "id": "3a",
+   "no": 3,
+   "kind": "edit and rehash one entry (chain break downstream)",
+   "model": "outside edit",
+   "location": "ledger 61, field 'decision'",
+   "desc": "entry hash recomputed for the edited entry only",
+   "exit": 1,
+   "seconds": 0.91,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries",
+    "[ledger] per-entry signatures: 132 of 133 entries signed and valid (key in ledger_allowed_signers)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "3b",
+   "no": 3,
+   "kind": "edit and rehash one entry (chain break downstream)",
+   "model": "outside edit",
+   "location": "ledger 110, field 'target'",
+   "desc": "entry hash recomputed for the edited entry only",
+   "exit": 1,
+   "seconds": 1.04,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries",
+    "[ledger] per-entry signatures: 132 of 133 entries signed and valid (key in ledger_allowed_signers)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "3c",
+   "no": 3,
+   "kind": "edit and rehash the whole downstream chain",
+   "model": "outside edit",
+   "location": "ledger 61 and every later entry",
+   "desc": "chain made consistent again; signatures untouched",
+   "exit": 1,
+   "seconds": 0.74,
+   "n_checks": 100,
+   "n_pass": 97,
+   "crashed": false,
+   "failing": [
+    "[ledger] per-entry signatures: 61 of 133 entries signed and valid (key in ledger_allowed_signers)",
+    "[ledger] RFC 3161 anchor of seq 99 head (Oct  4 15:57:56 2026 GMT)",
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "3d",
+   "no": 3,
+   "kind": "edit and rehash the whole downstream chain",
+   "model": "outside edit",
+   "location": "ledger 110 and every later entry (after the last time anchor, seq 99)",
+   "desc": "chain made consistent again; signatures untouched",
+   "exit": 1,
+   "seconds": 0.95,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] per-entry signatures: 110 of 133 entries signed and valid (key in ledger_allowed_signers)",
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "4a",
+   "no": 4,
+   "kind": "delete one ledger line",
+   "model": "outside edit",
+   "location": "ledger 61 (small-SiC decision, read by name)",
+   "desc": "line removed",
+   "exit": 1,
+   "seconds": 0.36,
+   "n_checks": null,
+   "n_pass": null,
+   "crashed": true,
+   "failing": [],
+   "error": "KeyError: 61",
+   "caught": true
+  },
+  {
+   "id": "4b",
+   "no": 4,
+   "kind": "delete one ledger line",
+   "model": "outside edit",
+   "location": "ledger 70 (si-zone decision, not read by name)",
+   "desc": "line removed",
+   "exit": 1,
+   "seconds": 1.14,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 132 entries",
+    "[ledger] signature file lists no entry missing from the ledger; seq numbers run 0 to N-1"
+   ],
+   "caught": true
+  },
+  {
+   "id": "4c",
+   "no": 4,
+   "kind": "delete the last ledger line (tail truncation)",
+   "model": "outside edit",
+   "location": "last ledger entry",
+   "desc": "ledger line removed, its signature record left in place",
+   "exit": 1,
+   "seconds": 0.96,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] signature file lists no entry missing from the ledger; seq numbers run 0 to N-1"
+   ],
+   "caught": true
+  },
+  {
+   "id": "4d",
+   "no": 4,
+   "kind": "delete the last ledger line and its signature",
+   "model": "outside edit",
+   "location": "last ledger entry",
+   "desc": "ledger line and its signature record both removed",
+   "exit": 0,
+   "seconds": 1.06,
+   "n_checks": 100,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [],
+   "caught": false
+  },
+  {
+   "id": "5a",
+   "no": 5,
+   "kind": "reorder two ledger lines",
+   "model": "outside edit",
+   "location": "ledger 61 and 62",
+   "desc": "the two lines swapped in the file",
+   "exit": 1,
+   "seconds": 1.12,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries",
+    "[ledger] signature file lists no entry missing from the ledger; seq numbers run 0 to N-1"
+   ],
+   "caught": true
+  },
+  {
+   "id": "5b",
+   "no": 5,
+   "kind": "reorder two ledger lines",
+   "model": "outside edit",
+   "location": "ledger 123 (answers) and 124 (grades)",
+   "desc": "the two lines swapped in the file",
+   "exit": 1,
+   "seconds": 0.96,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] hash chain over 133 entries",
+    "[ledger] signature file lists no entry missing from the ledger; seq numbers run 0 to N-1"
+   ],
+   "caught": true
+  },
+  {
+   "id": "6a",
+   "no": 6,
+   "kind": "swap a design file for an edited one after commitment",
+   "model": "outside edit",
+   "location": "gpumd/production/endpoint_campaign_design.json",
+   "desc": "one extra key added to the design",
+   "exit": 1,
+   "seconds": 0.98,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[endpoint v1] design endpoint_campaign_design.json re-hash (ledger seq 2)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "6b",
+   "no": 6,
+   "kind": "swap a design file for an edited one after commitment (pin file updated too)",
+   "model": "outside edit",
+   "location": "nano_sigec/small_sic/r50/r50_design.json",
+   "desc": "decision threshold text edited and PREREGISTERED_SHA256 rewritten to match",
+   "exit": 1,
+   "seconds": 0.99,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[small SiC] design r50_design.json re-hash (ledger seq 106)",
+    "[small SiC] 9 registered input files re-hash (seq 106)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "7a",
+   "no": 7,
+   "kind": "forge a signature",
+   "model": "outside edit",
+   "location": "signature record of ledger 61",
+   "desc": "signature replaced by one made with a key not in the allowed-signers file",
+   "exit": 1,
+   "seconds": 0.89,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] per-entry signatures: 132 of 133 entries signed and valid (key in ledger_allowed_signers)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "7b",
+   "no": 7,
+   "kind": "drop one signature line",
+   "model": "outside edit",
+   "location": "signature record of ledger 70",
+   "desc": "signature record removed",
+   "exit": 1,
+   "seconds": 1.05,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] per-entry signatures: 132 of 133 entries signed and valid (key in ledger_allowed_signers)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "7c",
+   "no": 7,
+   "kind": "substitute the signing key",
+   "model": "key holder",
+   "location": "phase_c/ledger_allowed_signers",
+   "desc": "allowed-signers file replaced and every entry re-signed; no ledger content changed",
+   "exit": 0,
+   "seconds": 1.04,
+   "n_checks": 100,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [],
+   "caught": false
+  },
+  {
+   "id": "7d",
+   "no": 7,
+   "kind": "substitute the key and rewrite the tail",
+   "model": "key holder",
+   "location": "ledger 110 measured 5 nm Ge saving, and every later entry",
+   "desc": "5 nm Ge saving at 300 K changed from 9.3% to 20%, chain rehashed from 110, all entries re-signed",
+   "exit": 1,
+   "seconds": 1.06,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "7e",
+   "no": 7,
+   "kind": "delete the RFC 3161 time anchor",
+   "model": "outside edit",
+   "location": "phase_c/anchors/head_seq0099.*",
+   "desc": "anchor token, query and metadata removed",
+   "exit": 0,
+   "seconds": 1.14,
+   "n_checks": 99,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [],
+   "caught": false
+  },
+  {
+   "id": "8a",
+   "no": 8,
+   "kind": "decision cites a registration that comes after it",
+   "model": "key holder",
+   "location": "ledger 105 (r30 decision), evidence.prereg_seq",
+   "desc": "prereg_seq changed from [103] to [106] (a later registration); rehashed and re-signed",
+   "exit": 1,
+   "seconds": 1.03,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[ledger] cited entries (prereg_seq, raw_seq, registration_seq, criteria_seq, rests_on) exist, precede the citing entry and have the expected kind",
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "8b",
+   "no": 8,
+   "kind": "decision cites a registration that comes after it",
+   "model": "key holder",
+   "location": "two new entries: decision, then registration",
+   "desc": "decision appended citing the next seq as its prereg_seq, registration appended after it; re-signed",
+   "exit": 1,
+   "seconds": 1.01,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] cited entries (prereg_seq, raw_seq, registration_seq, criteria_seq, rests_on) exist, precede the citing entry and have the expected kind"
+   ],
+   "caught": true
+  },
+  {
+   "id": "8c",
+   "no": 8,
+   "kind": "registration timestamp moved after the raw commit",
+   "model": "key holder",
+   "location": "ledger 106 (r50 registration), field 'time'",
+   "desc": "time set to 2026-10-08T16:00:00Z, after raw batch 108; rehashed and re-signed",
+   "exit": 1,
+   "seconds": 1.07,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[small SiC] order: design < raw < decision (seq 106, 108, 110)",
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "9a",
+   "no": 9,
+   "kind": "exceptional-label violation (ledger 118 rules): value downweighted while labelled",
+   "model": "key holder",
+   "location": "five new entries: label, operation, replicate registration, raw batch, resolution",
+   "desc": "prospective label on value P, then a downweight of P before the resolution; replicate otherwise in order",
+   "exit": 1,
+   "seconds": 1.0,
+   "n_checks": 101,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [
+    "[exceptional labels] no downweight or value change targets a value with an unresolved exceptional label"
+   ],
+   "caught": true
+  },
+  {
+   "id": "9b",
+   "no": 9,
+   "kind": "exceptional-label violation (ledger 118 rules): value removed while labelled",
+   "model": "key holder",
+   "location": "five new entries: label, operation, replicate registration, raw batch, resolution",
+   "desc": "as 9a with 'remove' (named in rule X2) in place of downweight",
+   "exit": 1,
+   "seconds": 1.09,
+   "n_checks": 101,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [
+    "[exceptional labels] no downweight or value change targets a value with an unresolved exceptional label"
+   ],
+   "caught": true
+  },
+  {
+   "id": "9c",
+   "no": 9,
+   "kind": "exceptional-label violation (ledger 118 rules): label postdates the replicate registration",
+   "model": "key holder",
+   "location": "two new entries: registration, then label",
+   "desc": "replicate registered first, label added afterwards and claimed as prospective",
+   "exit": 1,
+   "seconds": 1.1,
+   "n_checks": 101,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [
+    "[exceptional labels] prospective label seq 134: label < replication < raw < decision, replication is a registration and raw a batch result"
+   ],
+   "caught": true
+  },
+  {
+   "id": "9d",
+   "no": 9,
+   "kind": "exceptional-label violation (ledger 118 rules): finding claimed without a registered replicate",
+   "model": "key holder",
+   "location": "four new entries",
+   "desc": "label cites the next entry as its replicate registration, but that entry is an observation, the cited raw batch an analysis, then a 'confirmed' resolution",
+   "exit": 1,
+   "seconds": 1.12,
+   "n_checks": 101,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [
+    "[exceptional labels] prospective label seq 133: label < replication < raw < decision, replication is a registration and raw a batch result"
+   ],
+   "caught": true
+  },
+  {
+   "id": "9e",
+   "no": 9,
+   "kind": "exceptional-label violation (ledger 118 rules): retrospective label recounted as prospective",
+   "model": "key holder",
+   "location": "ledger 119 (Ge-corner label), field 'retrospective'",
+   "desc": "set to false; rehashed and re-signed",
+   "exit": 1,
+   "seconds": 1.1,
+   "n_checks": 100,
+   "n_pass": 98,
+   "crashed": false,
+   "failing": [
+    "[exceptional labels] prospective label seq 119: label < replication < raw < decision, replication is a registration and raw a batch result",
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "10a",
+   "no": 10,
+   "kind": "AI-theorist answers or outcome key out of order: answer file differs from ledger 123",
+   "model": "outside edit",
+   "location": "ai_theorist/answers/theorist_A_sonnet.json",
+   "desc": "one bit flipped",
+   "exit": 1,
+   "seconds": 1.08,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ai-theorist] answer theorist_A_sonnet.json re-hash (seq 123)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "10b",
+   "no": 10,
+   "kind": "AI-theorist answers or outcome key out of order: answer hash in ledger 123 replaced",
+   "model": "key holder",
+   "location": "ledger 123, answers_sha256 of theorist_B_haiku.json",
+   "desc": "hash replaced by that of an edited answer file (file also replaced); rehashed and re-signed",
+   "exit": 1,
+   "seconds": 1.0,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ledger] RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "10c",
+   "no": 10,
+   "kind": "AI-theorist answers or outcome key out of order: outcome key published before the answers entry",
+   "model": "outside edit",
+   "location": "git history of ai_theorist/outcome_key.json",
+   "desc": "commit adding the key re-dated to 17:05 UTC, before the answers entry (17:12:58 UTC)",
+   "exit": 1,
+   "seconds": 1.01,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ai-theorist] outcome key first committed after the answer entry"
+   ],
+   "caught": true
+  },
+  {
+   "id": "10d",
+   "no": 10,
+   "kind": "AI-theorist answers or outcome key out of order: outcome key edited after commitment",
+   "model": "outside edit",
+   "location": "ai_theorist/outcome_key.json",
+   "desc": "one bit flipped",
+   "exit": 1,
+   "seconds": 0.98,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[ai-theorist] published outcome key = hash committed before the answers (seq 122)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "11a",
+   "no": 11,
+   "kind": "correction reaches beyond the reach declared before the evidence: declared reach rewritten",
+   "model": "outside edit",
+   "location": "nano_sigec/small_sic/decision_robustness.json (hashed in ledger 58)",
+   "desc": "density-bracket pick at 300 K changed from x = 0.3 to x = 0.5, widening what a revision may move",
+   "exit": 1,
+   "seconds": 1.07,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[small SiC] 6 registered input files re-hash (seq 58)"
+   ],
+   "caught": true
+  },
+  {
+   "id": "11b",
+   "no": 11,
+   "kind": "correction reaches beyond the reach declared before the evidence: correction moves the composition",
+   "model": "key holder",
+   "location": "one new entry, small-SiC r50 campaign",
+   "desc": "'correct' decision appended that moves the 300 K recipe to x = 0.5 and 5 at% C, which the declared reach excludes; re-signed",
+   "exit": 0,
+   "seconds": 1.04,
+   "n_checks": 100,
+   "n_pass": 100,
+   "crashed": false,
+   "failing": [],
+   "caught": false
+  },
+  {
+   "id": "11c",
+   "no": 11,
+   "kind": "correction reaches beyond the reach declared before the evidence: registered analysis script edited",
+   "model": "outside edit",
+   "location": "nano_sigec/small_sic/r30/analyze_r30.py (hashed in ledger 103)",
+   "desc": "one comment line appended to the registered analysis script",
+   "exit": 1,
+   "seconds": 0.99,
+   "n_checks": 100,
+   "n_pass": 99,
+   "crashed": false,
+   "failing": [
+    "[small SiC] 9 registered input files re-hash (seq 103)"
+   ],
+   "caught": true
+  }
+ ],
+ "planted": 37,
+ "caught": 33,
+ "total_seconds": 56.0
+}

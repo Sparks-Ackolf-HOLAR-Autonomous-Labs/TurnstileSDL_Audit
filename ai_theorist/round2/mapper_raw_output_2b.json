@@ -1,0 +1,113 @@
+{
+ "duration_api_ms": 13225,
+ "stop_reason": "end_turn",
+ "session_id": "51cab07f-b4b6-43c4-88c4-61b4654c7606",
+ "total_cost_usd": 0.29751690000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 69594,
+  "cache_read_input_tokens": 3148,
+  "output_tokens": 1205,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 69594,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1205,
+    "cache_read_input_tokens": 3148,
+    "cache_creation_input_tokens": 69594,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 69594
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-haiku-5-5": {
+   "inputTokens": 67586,
+   "outputTokens": 27,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0067721,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-sonnet-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1205,
+   "cacheReadInputTokens": 3148,
+   "cacheCreationInputTokens": 69594,
+   "webSearchRequests": 0,
+   "costUSD": 0.2907448,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-sonnet-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "{\"H1b\":{\"theory\":\"A Si-rich shell reduces local alloy disorder but adds interface/gradient scattering; net effect depends on shell thickness, with thin shells possibly helping and thicker ones hurting.\",\"category\":null,\"p_category\":null,\"value\":null,\"value_range\":null,\"falsifier\":\"Atomistic simulations sweeping shell thickness always show a monotonic decrease in kappa with thickness, which would falsify the disorder-relief vs added-scattering crossover.\",\"reach\":\"Would change how much of the SiC particle's kappa reduction is attributed to interface scattering versus the surrounding composition.\",\"basis\":null},\"H5\":{\"theory\":\"Tersoff-1989 gives bulk Si kappa higher than DFT-based BTE, by about 2x at 300 K (Tersoff-based transport 305 vs DFT 147 W/mK). The gap is expected to grow at 1100 K because four-phonon scattering lowers the DFT reference faster with temperature.\",\"category\":\"Tersoff higher by more than 30%\",\"p_category\":0.7,\"value\":null,\"value_range\":null,\"falsifier\":\"Size-converged homogeneous NEMD with Tersoff-1989 on bulk Si at 300 K and 1100 K that falls within \u00b130% of the almaBTE values at both temperatures.\",\"reach\":\"If it holds, Tersoff-based MD kappa values for Si-rich systems are biased high relative to the first-principles reference, which affects cross-source comparisons across the campaign.\",\"basis\":\"H5 @1100 K: If the almaBTE reference includes strong high-T resistive physics (especially 4ph), then the comparison category is most likely \u201cTersoff higher by more than 30%\u201d, unless NEMD length/gradient artifacts reduce \u03ba_Tersoff.\"},\"H6\":{\"theory\":\"The theories say as-grown substitutional C is metastable and that SiC formation needs a thermal-budget or defect-injection step. They give no formation energies and no numeric Si-vs-Ge neighbour preference for C, so the sign and size of the SiC energy gain are not addressed.\",\"category\":null,\"p_category\":null,\"value\":null,\"value_range\":null,\"falsifier\":\"A MACE-MP-0 energy comparison of substitutional C versus C in a SiC precipitate in Si0.8Ge0.2.\",\"reach\":\"Determines whether the Si-rich shell and SiC precipitate picture used in the thermal-conductivity runs is energetically justified.\",\"basis\":null},\"H7\":{\"theory\":\"Alloy disorder dominates at x\u22480.5, so coherent strain only modestly changes kappa and does so anisotropically. In-plane kappa is unchanged to mildly increased, while cross-plane kappa decreases.\",\"category\":\"decrease\",\"p_category\":0.6,\"value\":-8,\"value_range\":[-12,-5],\"falsifier\":\"Coherent versus relaxed Si0.5Ge0.5 simulations in which cross-plane kappa changes by less than 5% or increases, or changes by more than 25% without dislocations.\",\"reach\":\"If it holds, strain engineering of SiGe films gives only small, anisotropic kappa changes, so films can be compared with relaxed bulk values to within about 10%.\",\"basis\":\"For coherently compressed Si0.5Ge0.5 on Si(001) at 300 K, \u03ba\u22a5 (cross-plane) will fall slightly relative to relaxed bulk (category: decrease), with a likely magnitude of ~5\u201312% decrease, while \u03ba\u2225 increases modestly (few to ~10%) due to in-plane stiffening.\"}}",
+ "ttft_ms": 12201,
+ "type": "result",
+ "duration_ms": 12229,
+ "uuid": "1ee61f65-7aac-459b-8ee7-fe8b11919489",
+ "ttft_stream_ms": 4654,
+ "time_to_request_ms": 128,
+ "first_content_frame_ms": 4655,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

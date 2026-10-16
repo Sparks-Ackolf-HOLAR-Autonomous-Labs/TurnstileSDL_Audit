@@ -1,0 +1,4 @@
+# Raw campaign evidence: every file here is hashed on the ledger and must be committed.
+# Overrides a repository-wide *.out / *.log ignore, which once dropped these files silently.
+!*.out
+!*.log

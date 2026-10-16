@@ -1,0 +1,17 @@
+# Python 3.12. Figures, checkers and analyses:
+numpy
+scipy
+matplotlib
+pandas
+scikit-learn
+sympy
+networkx
+ase
+
+# Only to repeat the simulations or engine comparisons (LAMMPS with its Python
+# module, GPUMD and almaBTE are separate installs; see each campaign README):
+# mace-torch
+# torch
+# lammps
+
+# verify_record.py also uses git, ssh-keygen and openssl from the system.

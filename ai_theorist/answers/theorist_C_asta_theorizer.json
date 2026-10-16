@@ -1,0 +1,142 @@
+{
+ "theorist": "C: Asta Theorizer (gpt-5.2 / gpt-5-mini, literature-grounded) mapped by a tool-less Claude Sonnet call (claude -p --tools '', 1 turn)",
+ "mapper_model": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "answers": {
+  "H1": {
+   "theory": "Stiffness-contrast scattering from SiC inclusions is missing in mass-only models, so chemistry-aware MD would give a larger reduction than the continuum bracket.",
+   "category": "above",
+   "p_category": 0.3,
+   "value": null,
+   "value_range": null,
+   "falsifier": "MD at R=2.0 nm giving a reduction inside 40-75 %",
+   "reach": "Mass-only models would then be adequate for SiC inclusions.",
+   "basis": "If a SiGe nanocomposite contains chemistry-distinct inclusions (e.g., SiC) rather than isomorphous Si/Ge inclusions, then a mass-only inclusion model will systematically underpredict the inclusion\u2019s \u03ba suppression relative to chemistry-aware (DFT/ML) models because stiffness/topology scattering is missing."
+  },
+  "H1b": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  },
+  "H2": {
+   "theory": "Finite-size and potential-dispersion errors are amplified near the end members where intrinsic scattering is weak, so the fitted law breaks down there and the high points are physical.",
+   "category": "physics",
+   "p_category": 0.65,
+   "value": null,
+   "value_range": null,
+   "falsifier": "High-x points disappearing when box size is increased and the Tersoff dispersion is checked",
+   "reach": "Low-order empirical laws would not be trusted near the end members.",
+   "basis": "Fitted low-order empirical laws for kappa(x,T) derived from finite-size MD boxes will show composition-dependent breakdown near end members more readily than DFT-BTE/VCA curves, because finite-size and potential-dispersion errors are amplified when intrinsic scattering is weak (near pure Si or pure Ge)."
+  },
+  "H3": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  },
+  "H4": {
+   "theory": "Amorphous kappa has weaker length dependence than the crystal, and any residual dependence is kappa rising with length as low-frequency modes are better represented.",
+   "category": "rises with length",
+   "p_category": 0.5,
+   "value": null,
+   "value_range": null,
+   "falsifier": "kappa falling with cell length after statistical convergence",
+   "reach": "Amorphous kappa from small boxes would be underconverged.",
+   "basis": "Reverse-NEMD (or EMD) \u03ba for amorphous Si0.5Ge0.5 will show substantially weaker length dependence than crystalline Si0.5Ge0.5 in comparable cell geometries; any residual length dependence should primarily appear as \u03ba increasing with length as the low-frequency sector becomes better represented."
+  },
+  "H5": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  },
+  "H6": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  },
+  "H7": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  },
+  "H8": {
+   "theory": "Perfect-crystal DFT-BTE is an upper envelope and real microstructure such as grain boundaries lowers kappa further.",
+   "category": "below 0.7",
+   "p_category": 0.5,
+   "value": null,
+   "value_range": null,
+   "falsifier": "Median sintered/almaBTE ratio above 0.9",
+   "reach": "almaBTE would be a ceiling rather than a calibrated prediction for sintered samples.",
+   "basis": "Perfect-crystal calculations give the high end. Real microstructures usually lower \u03ba, and they do so more when grains/interfaces are small enough to block the long-traveling phonons."
+  },
+  "H9": {
+   "theory": "A thin oxide cap removes the free surface as a Sn sink and so suppresses the change. The uncapped film shows an incubation of about 50 min before collapse.",
+   "category": "cap suppresses the change",
+   "p_category": 0.95,
+   "value": 50,
+   "value_range": [
+    40,
+    60
+   ],
+   "falsifier": "Capped and uncapped films showing the same incubation and collapse at 550 \u00b0C",
+   "reach": "The surface sink would not control the Sn loss.",
+   "basis": "Uncapped SiGeSn at 550 \u00b0C shows ~50 min incubation then rapid collapse with a fitted logistic width of ~1.9 min; 3 nm SiO2-capped Si0.08Ge0.88Sn0.04 shows <1 at.% Sn change over 140 min at 550 \u00b0C, |\u0394E2| < 20 meV, no voids, preserved uniform Sn (EDX/APT), limited strain relaxation, and far lower contact resistivity than uncapped."
+  },
+  "O1": {
+   "theory": "VSnV formation becomes more favourable and binding strengthens with Sn content, so Sn adjacent to a vacancy is bound at 12 % Sn, probably by more than 0.3 eV.",
+   "category": "bound by more than 0.3 eV",
+   "p_category": 0.5,
+   "value": null,
+   "value_range": null,
+   "falsifier": "MACE-MP-0 giving negative Sn-vacancy binding in Ge0.88Sn0.12",
+   "reach": "The complexation-controlled low-barrier regime would be undermined.",
+   "basis": "O1 (Ge0.88Sn0.12, MACE-MP-0 static): a substitutional Sn adjacent to a vacancy is predicted to be bound (positive binding). Category-level expectation: 'bound by 0 to 0.3 eV' or 'bound by more than 0.3 eV' (leaning >0.3 eV given VSnV stabilization trends at higher Sn, but noting dopant-free context matters)."
+  },
+  "O2": {
+   "theory": "Vacancy-assisted Sn hops show a low-barrier effective activation energy, well below bulk Ge and in the metastable-film range.",
+   "category": "close to the low-temperature metastable-film value (1.1 to 1.8 eV)",
+   "p_category": 0.5,
+   "value": null,
+   "value_range": null,
+   "falsifier": "MD hop activation energies of 2.9-3.3 eV",
+   "reach": "Low-temperature enhanced Sn diffusion would be attributed to vacancy complexation.",
+   "basis": "O2 (Ge0.88Sn0.12 with vacancies, 500\u2013700 K MD): effective activation energy for observed Sn hops is predicted to be well below bulk Ge substitutional diffusion (2.9\u20133.3 eV) and more consistent with a low-barrier regime (category: 'close to the low-temperature metastable-film value (1.1 to 1.8 eV)' rather than bulk-like)."
+  },
+  "O3": {
+   "theory": null,
+   "category": null,
+   "p_category": null,
+   "value": null,
+   "value_range": null,
+   "falsifier": null,
+   "reach": null,
+   "basis": null
+  }
+ }
+}

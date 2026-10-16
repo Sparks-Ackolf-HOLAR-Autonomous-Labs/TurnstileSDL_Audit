@@ -1,0 +1,2296 @@
+{
+ "committed_stages": [
+  "V1-anchor-300K",
+  "V2-size-check",
+  "V3-highT"
+ ],
+ "gates": {
+  "P1_linearity|Ge|1100": true,
+  "P1_linearity|Ge|300": true,
+  "P1_linearity|Ge|700": true,
+  "P1_linearity|Si|1100": false,
+  "P1_linearity|Si|300": false,
+  "P1_linearity|Si|700": true
+ },
+ "gpus": [
+  "NVIDIA A40, 580.173.02",
+  "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+  "NVIDIA RTX A6000, 580.173.02",
+  "Tesla T4, 580.173.02"
+ ],
+ "points": {
+  "Ge|1100|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 19.739,
+    "n": 4,
+    "se": 1.097,
+    "seed_se": 0.872,
+    "sem_floor": 1.097
+   },
+   "n_pass": 4,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Ge|1100|8e-05|8x8x8": {
+   "Fe": 8e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 18.835,
+    "n": 4,
+    "se": 0.441,
+    "seed_se": 0.355,
+    "sem_floor": 0.441
+   },
+   "n_pass": 4,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Ge|300|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 80.864,
+    "n": 4,
+    "se": 9.298,
+    "seed_se": 9.298,
+    "sem_floor": 6.136
+   },
+   "n_pass": 4,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Ge|300|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 82.585,
+    "n": 4,
+    "se": 2.968,
+    "seed_se": 1.688,
+    "sem_floor": 2.968
+   },
+   "n_pass": 4,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Ge|700|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 32.353,
+    "n": 5,
+    "se": 2.451,
+    "seed_se": 2.451,
+    "sem_floor": 2.289
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Ge|700|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 32.537,
+    "n": 4,
+    "se": 1.768,
+    "seed_se": 1.768,
+    "sem_floor": 1.241
+   },
+   "n_pass": 4,
+   "n_runs": 5,
+   "system": "Ge"
+  },
+  "Si|1100|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 45.33,
+    "n": 5,
+    "se": 3.894,
+    "seed_se": 3.894,
+    "sem_floor": 2.561
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Si"
+  },
+  "Si|1100|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 54.566,
+    "n": 5,
+    "se": 1.824,
+    "seed_se": 1.081,
+    "sem_floor": 1.824
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Si"
+  },
+  "Si|300|1e-05|16x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "estimate": null,
+   "n_pass": 0,
+   "n_runs": 3,
+   "system": "Si"
+  },
+  "Si|300|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 269.286,
+    "n": 5,
+    "se": 14.089,
+    "seed_se": 5.369,
+    "sem_floor": 14.089
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Si"
+  },
+  "Si|300|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 343.076,
+    "n": 3,
+    "se": 11.535,
+    "seed_se": 10.78,
+    "sem_floor": 11.535
+   },
+   "n_pass": 3,
+   "n_runs": 5,
+   "system": "Si"
+  },
+  "Si|700|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 97.863,
+    "n": 5,
+    "se": 9.645,
+    "seed_se": 5.341,
+    "sem_floor": 9.645
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Si"
+  },
+  "Si|700|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 95.148,
+    "n": 5,
+    "se": 4.712,
+    "seed_se": 3.78,
+    "sem_floor": 4.712
+   },
+   "n_pass": 5,
+   "n_runs": 5,
+   "system": "Si"
+  }
+ },
+ "predictions": {
+  "Ge_monotone_in_T": true,
+  "P1_passes_300_both": false,
+  "Si_monotone_in_T": true,
+  "agree_bte_30pct_1100_both": true,
+  "kSi300_fe1e-5_within_20pct_of_284": true,
+  "ratio300_in_1.4_2.2_both": true
+ },
+ "restore": {
+  "1100": {
+   "P1_Ge": true,
+   "P1_Si": false,
+   "P2_size": "n/a",
+   "points_ok": true,
+   "restored": false,
+   "scope_label": null
+  },
+  "300": {
+   "P1_Ge": true,
+   "P1_Si": false,
+   "P2_size": null,
+   "points_ok": true,
+   "restored": false,
+   "scope_label": null
+  },
+  "700": {
+   "P1_Ge": true,
+   "P1_Si": true,
+   "P2_size": "n/a",
+   "points_ok": true,
+   "restored": true,
+   "scope_label": {
+    "parentage": "Tersoff-1989",
+    "ratio_to_bte_Ge": 1.262,
+    "ratio_to_bte_Si": 1.513
+   }
+  }
+ },
+ "runs": {
+  "Ge_T1100_fe4e-5_8x8x8_s56054": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.67,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 18.8821,
+   "lines": 10000,
+   "mean_T": 1099.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56054",
+   "seed": 56054,
+   "sem": 2.7513,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe4e-5_8x8x8_s56055": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.52,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 19.8936,
+   "lines": 10000,
+   "mean_T": 1100.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56055",
+   "seed": 56055,
+   "sem": 1.0411,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe4e-5_8x8x8_s56056": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 4,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.47,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 22.1063,
+   "lines": 10000,
+   "mean_T": 1099.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56056",
+   "seed": 56056,
+   "sem": 2.7509,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe4e-5_8x8x8_s56057": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 3.04,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 16.2004,
+   "lines": 10000,
+   "mean_T": 1099.8,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56057",
+   "seed": 56057,
+   "sem": 1.6565,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe4e-5_8x8x8_s56058": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -4.86,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 18.0749,
+   "lines": 10000,
+   "mean_T": 1099.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56058",
+   "seed": 56058,
+   "sem": 1.7403,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s56059": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.71,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 19.4656,
+   "lines": 10000,
+   "mean_T": 1100.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56059",
+   "seed": 56059,
+   "sem": 1.1502,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s56060": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.96,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 18.0533,
+   "lines": 10000,
+   "mean_T": 1100.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56060",
+   "seed": 56060,
+   "sem": 0.804,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s56061": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 4.69,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 17.7115,
+   "lines": 10000,
+   "mean_T": 1099.9,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56061",
+   "seed": 56061,
+   "sem": 0.7455,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s56062": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.44,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 18.4135,
+   "lines": 10000,
+   "mean_T": 1101.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56062",
+   "seed": 56062,
+   "sem": 0.5573,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s56063": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.55,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 19.4086,
+   "lines": 10000,
+   "mean_T": 1099.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56063",
+   "seed": 56063,
+   "sem": 0.9149,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s56011": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 3.09,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 100.6562,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56011",
+   "seed": 56011,
+   "sem": 12.5006,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s56012": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 2.02,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 75.6529,
+   "lines": 20000,
+   "mean_T": 300.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56012",
+   "seed": 56012,
+   "sem": 10.81,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s56013": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.06,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA A40, 580.173.02",
+   "kappa": 108.1006,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56013",
+   "seed": 56013,
+   "sem": 13.2953,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s56014": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.53,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 66.2579,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56014",
+   "seed": 56014,
+   "sem": 10.6389,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s56015": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.94,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 73.4433,
+   "lines": 20000,
+   "mean_T": 299.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56015",
+   "seed": 56015,
+   "sem": 13.9828,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s56016": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.42,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 85.3805,
+   "lines": 20000,
+   "mean_T": 299.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56016",
+   "seed": 56016,
+   "sem": 3.8918,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s56017": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 3.25,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 91.096,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56017",
+   "seed": 56017,
+   "sem": 7.2453,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s56018": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.35,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 82.9668,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56018",
+   "seed": 56018,
+   "sem": 5.1562,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s56019": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.69,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 84.2521,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56019",
+   "seed": 56019,
+   "sem": 6.7997,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s56020": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -3.74,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 77.742,
+   "lines": 20000,
+   "mean_T": 299.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56020",
+   "seed": 56020,
+   "sem": 7.2752,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s56044": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.14,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 34.2249,
+   "lines": 10000,
+   "mean_T": 700.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56044",
+   "seed": 56044,
+   "sem": 4.9489,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s56045": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.24,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 28.9984,
+   "lines": 10000,
+   "mean_T": 700.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56045",
+   "seed": 56045,
+   "sem": 4.9416,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s56046": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.73,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 41.2015,
+   "lines": 10000,
+   "mean_T": 699.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56046",
+   "seed": 56046,
+   "sem": 4.9098,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s56047": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.87,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 28.7045,
+   "lines": 10000,
+   "mean_T": 700.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56047",
+   "seed": 56047,
+   "sem": 6.0114,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s56048": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.73,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA A40, 580.173.02",
+   "kappa": 28.6353,
+   "lines": 10000,
+   "mean_T": 699.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56048",
+   "seed": 56048,
+   "sem": 4.6758,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s56049": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.09,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 34.4591,
+   "lines": 10000,
+   "mean_T": 700.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56049",
+   "seed": 56049,
+   "sem": 2.6941,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s56050": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.89,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 27.5023,
+   "lines": 10000,
+   "mean_T": 700.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56050",
+   "seed": 56050,
+   "sem": 2.0889,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s56051": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -3.37,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 35.4429,
+   "lines": 10000,
+   "mean_T": 700.4,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56051",
+   "seed": 56051,
+   "sem": 3.1598,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s56052": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 4.44,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 33.0495,
+   "lines": 10000,
+   "mean_T": 700.0,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56052",
+   "seed": 56052,
+   "sem": 2.3505,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s56053": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.5,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 32.7433,
+   "lines": 10000,
+   "mean_T": 700.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56053",
+   "seed": 56053,
+   "sem": 1.7444,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s56034": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.63,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 45.2723,
+   "lines": 10000,
+   "mean_T": 1099.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56034",
+   "seed": 56034,
+   "sem": 2.6858,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s56035": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.16,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 45.5167,
+   "lines": 10000,
+   "mean_T": 1100.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56035",
+   "seed": 56035,
+   "sem": 5.7328,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s56036": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.91,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 59.5013,
+   "lines": 10000,
+   "mean_T": 1099.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56036",
+   "seed": 56036,
+   "sem": 5.8647,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s56037": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.2,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA A40, 580.173.02",
+   "kappa": 37.8823,
+   "lines": 10000,
+   "mean_T": 1100.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56037",
+   "seed": 56037,
+   "sem": 5.8471,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s56038": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.97,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 38.4797,
+   "lines": 10000,
+   "mean_T": 1100.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56038",
+   "seed": 56038,
+   "sem": 7.4368,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s56039": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -4.96,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 55.6843,
+   "lines": 10000,
+   "mean_T": 1099.7,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56039",
+   "seed": 56039,
+   "sem": 3.9834,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s56040": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.98,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 50.3352,
+   "lines": 10000,
+   "mean_T": 1100.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56040",
+   "seed": 56040,
+   "sem": 4.6509,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s56041": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.78,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 56.312,
+   "lines": 10000,
+   "mean_T": 1100.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56041",
+   "seed": 56041,
+   "sem": 2.5361,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s56042": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.08,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 55.5888,
+   "lines": 10000,
+   "mean_T": 1099.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56042",
+   "seed": 56042,
+   "sem": 4.1882,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s56043": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.78,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 54.9113,
+   "lines": 10000,
+   "mean_T": 1099.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56043",
+   "seed": 56043,
+   "sem": 4.6621,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_16x8x8_s56021": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 2,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "drift_z": 4.18,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 568.5928,
+   "lines": 20000,
+   "mean_T": 300.1,
+   "n_atoms": 8192,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56021",
+   "seed": 56021,
+   "sem": 42.3834,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_16x8x8_s56022": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 2,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "drift_z": 5.07,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 464.9269,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 8192,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56022",
+   "seed": 56022,
+   "sem": 55.3533,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_16x8x8_s56023": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 2,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "drift_z": 5.61,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 497.074,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 8192,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56023",
+   "seed": 56023,
+   "sem": 45.4222,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s56001": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 2,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.75,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 275.273,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56001",
+   "seed": 56001,
+   "sem": 35.804,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s56002": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 2,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.39,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 260.2995,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56002",
+   "seed": 56002,
+   "sem": 22.1495,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s56003": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -3.08,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 260.4129,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56003",
+   "seed": 56003,
+   "sem": 34.4015,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s56004": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.85,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 287.6884,
+   "lines": 20000,
+   "mean_T": 300.2,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56004",
+   "seed": 56004,
+   "sem": 30.4698,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s56005": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.02,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 262.7569,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56005",
+   "seed": 56005,
+   "sem": 32.8323,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe2e-5_8x8x8_s56006": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 5.06,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA A40, 580.173.02",
+   "kappa": 282.0513,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56006",
+   "seed": 56006,
+   "sem": 12.5678,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe2e-5_8x8x8_s56007": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 5.06,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 399.7014,
+   "lines": 20000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56007",
+   "seed": 56007,
+   "sem": 33.5737,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe2e-5_8x8x8_s56008": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.36,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 347.5069,
+   "lines": 20000,
+   "mean_T": 299.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56008",
+   "seed": 56008,
+   "sem": 8.9131,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe2e-5_8x8x8_s56009": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.15,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 359.1347,
+   "lines": 20000,
+   "mean_T": 299.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56009",
+   "seed": 56009,
+   "sem": 28.1457,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe2e-5_8x8x8_s56010": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "attempts": 5,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.43,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 322.5877,
+   "lines": 20000,
+   "mean_T": 299.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56010",
+   "seed": 56010,
+   "sem": 18.0513,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s56024": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.65,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 82.6793,
+   "lines": 10000,
+   "mean_T": 699.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56024",
+   "seed": 56024,
+   "sem": 22.5578,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s56025": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.3,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 98.6252,
+   "lines": 10000,
+   "mean_T": 700.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56025",
+   "seed": 56025,
+   "sem": 22.1583,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s56026": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.09,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA A40, 580.173.02",
+   "kappa": 115.9827,
+   "lines": 10000,
+   "mean_T": 700.2,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56026",
+   "seed": 56026,
+   "sem": 20.1038,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s56027": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.13,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 97.4718,
+   "lines": 10000,
+   "mean_T": 699.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56027",
+   "seed": 56027,
+   "sem": 9.7104,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s56028": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.97,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "Tesla T4, 580.173.02",
+   "kappa": 94.5569,
+   "lines": 10000,
+   "mean_T": 699.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56028",
+   "seed": 56028,
+   "sem": 28.7677,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s56029": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.02,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 94.1186,
+   "lines": 10000,
+   "mean_T": 699.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56029",
+   "seed": 56029,
+   "sem": 11.3185,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s56030": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -3.97,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 96.3747,
+   "lines": 10000,
+   "mean_T": 699.7,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56030",
+   "seed": 56030,
+   "sem": 11.034,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s56031": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.9,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 81.4727,
+   "lines": 10000,
+   "mean_T": 700.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56031",
+   "seed": 56031,
+   "sem": 9.4582,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s56032": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 3,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.14,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA RTX A6000, 580.173.02",
+   "kappa": 103.5287,
+   "lines": 10000,
+   "mean_T": 699.4,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56032",
+   "seed": 56032,
+   "sem": 8.6774,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s56033": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "attempts": 1,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.67,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "gpu": "NVIDIA GeForce RTX 2080 Ti, 580.173.02",
+   "kappa": 100.2465,
+   "lines": 10000,
+   "mean_T": 700.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56033",
+   "seed": 56033,
+   "sem": 11.8511,
+   "stage": "V3-highT",
+   "system": "Si"
+  }
+ },
+ "states": {
+  "Ge|1100": {
+   "bte_dft": 16.7,
+   "kappa": 19.29,
+   "ratio_to_bte": 1.155,
+   "se": 0.59
+  },
+  "Ge|300": {
+   "bte_dft": 57.1,
+   "kappa": 81.72,
+   "ratio_to_bte": 1.431,
+   "se": 4.88
+  },
+  "Ge|700": {
+   "bte_dft": 25.7,
+   "kappa": 32.45,
+   "ratio_to_bte": 1.262,
+   "se": 1.51
+  },
+  "Si|1100": {
+   "bte_dft": 40.5,
+   "kappa": 49.95,
+   "ratio_to_bte": 1.233,
+   "se": 2.15
+  },
+  "Si|300": {
+   "bte_dft": 160.5,
+   "kappa": 306.18,
+   "ratio_to_bte": 1.908,
+   "se": 9.1
+  },
+  "Si|700": {
+   "bte_dft": 63.8,
+   "kappa": 96.51,
+   "ratio_to_bte": 1.513,
+   "se": 5.37
+  }
+ },
+ "total_attempts": 205
+}

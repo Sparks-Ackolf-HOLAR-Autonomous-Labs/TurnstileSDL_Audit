@@ -1,0 +1,7 @@
+{
+ "max_papers_to_retrieve": 15,
+ "generation_objective": "accuracy-focused",
+ "do_qualified_novelty_evaluation": false,
+ "theory_query": "Build theories of how Sn-vacancy binding, vacancy-mediated Sn diffusion and surface capping control the stability of substitutional Sn in metastable GeSn and SiGeSn films during annealing at 400 to 700 C.",
+ "mission_statement": "The theories will be used to answer the following questions before the corresponding results are seen. Address the mechanisms they depend on:\n\nH9. In-situ spectroscopic ellipsometry follows a Si0.08Ge0.88Sn0.04 film held\nat 550 C. One sample is uncapped, the other capped with 3 nm SiO2. The\nobservable tracks loss of substitutional Sn near the surface.\nCategory: \"cap suppresses the change\", \"cap accelerates the change\",\n\"no difference\". Value: for the uncapped film, the time in minutes before\nthe change becomes visible (incubation time).\n\n## Open questions (no result exists yet; your answers will be tested later)\nO1. MACE-MP-0 (the 2023 foundation potential) static calculation in\nGe0.88Sn0.12: binding energy of a Sn atom to a neighbouring vacancy\n(positive = bound), eV. Category: \"bound by more than 0.3 eV\",\n\"bound by 0 to 0.3 eV\", \"unbound\".\nO2. MACE-MP-0 MD of Ge0.88Sn0.12 containing vacancies, 500 to 700 K,\nabout 1 ns. Effective activation energy of the Sn hops observed, eV.\nCategory: \"close to the bulk Ge value (2.9 to 3.3 eV)\",\n\"close to the low-temperature metastable-film value (1.1 to 1.8 eV)\",\n\"below 1.1 eV\"."
+}

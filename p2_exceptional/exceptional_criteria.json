@@ -1,0 +1,25 @@
+{
+  "commitment": "criteria-exceptional-label-2026-10-09",
+  "paper": "P2 (record and outside check); the rule itself is used by P1 and simulated in P3 (p3_reserve)",
+  "operator_go": "issue 55, 2026-10-09: 'go for P2 and P3 addition as well' (P2 addition = the criteria for calling a point exceptional are committed before results, papers/26 section 5)",
+  "purpose": "Fix, before any future result exists, when a value may be labelled exceptional, what may and may not be done to it while it carries that label, and when it may be reported as a finding. A finding named after the outcome is known must be distinguishable in the record from one whose criteria came first.",
+  "definitions": {
+    "exceptional": "a value that departs from the current law (or the current consensus of the evidence sources) by more than the trigger below, in either direction. Departures toward a wanted property (lower lattice thermal conductivity, a metastable phase that holds, an unexpected sweet spot) are replicated first; direction sets priority, not eligibility.",
+    "stated scatter": "the scatter the evidence source itself reports or that the campaign measured for it: seed-to-seed scatter for MD and BTE runs, the reported uncertainty for literature and database values (default 10 percent when none is reported)"
+  },
+  "rules": {
+    "X1_trigger": "a value may be labelled exceptional when |ln(observed / law)| exceeds 3 times the stated scatter of its source, or when a registered detector flags it as an isolated outlier; a label entry must cite this commitment by ledger sequence number",
+    "X2_first_response": "the first response to a triggered value is a label: exceptional, or set aside (reversible). No change to the stored value (correct, replace, remove) and no downweight may target a value while it carries the exceptional label",
+    "X3_replication": "an exceptional label is resolved only by at least one independent replicate of the same recipe (new seed, new run, or a second independent source), registered on the ledger before the replicate runs; confirmed when the replicate agrees within 2 sqrt(2) times the stated scatter",
+    "X4_outcomes": "confirmed: the value is kept as a named finding and the law gains a term or variable, or its range is limited at that point; not confirmed: the value is set aside with the replicate recorded as the cause; a change to the stored value additionally needs an identified cause (unit slip, value absent from its source, wrong material) as for any other value",
+    "X5_finding_claim": "a value may be reported as a prospective finding only if its exceptional label entry precedes, in ledger order, the registration of the replicate that confirmed it",
+    "X6_retrospective": "values recognised as exceptional before this commitment existed may be labelled, but each such label carries retrospective: true and is never counted as a prospective finding under X5"
+  },
+  "checks_an_outside_reader_can_run": [
+    "the criteria file re-hashes to the value in its commitment entry",
+    "every exceptional label cites a criteria commitment that precedes it",
+    "every prospective label is followed by a replication registration, then the replicate's raw batch, then the resolving decision, in that order",
+    "no downweight, correct, replace or remove entry targets a value while its exceptional label is unresolved",
+    "retrospective labels are reported separately and never counted as prospective findings"
+  ]
+}

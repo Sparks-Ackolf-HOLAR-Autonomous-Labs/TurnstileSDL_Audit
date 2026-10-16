@@ -1,0 +1,234 @@
+{
+ "outcome_key_seq": 122,
+ "answers_seq": 123,
+ "theorist_A_sonnet.json": {
+  "per_question": {
+   "H1": {
+    "category": "inside",
+    "cat_hit": 0,
+    "brier": 0.303,
+    "value": 55,
+    "value_hit": 0,
+    "covered": 1
+   },
+   "H1b": {
+    "category": "lower",
+    "cat_hit": 0,
+    "brier": 0.49,
+    "value": -30,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H2": {
+    "category": "physics",
+    "cat_hit": 1,
+    "brier": 0.04,
+    "value": 12,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H3": {
+    "category": "0.4<=x<=0.6",
+    "cat_hit": 1,
+    "brier": 0.09,
+    "value": 4.9,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H4": {
+    "category": "size-independent",
+    "cat_hit": 0,
+    "brier": 0.49,
+    "value": 1.08,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H5": {
+    "category": "agree within 30 %",
+    "cat_hit": 1,
+    "brier": 0.36,
+    "value": 1.3,
+    "value_hit": 0,
+    "covered": 1
+   },
+   "H6": {
+    "category": "SiC precipitate favoured",
+    "cat_hit": 1,
+    "brier": 0.023,
+    "value": 1.0,
+    "value_hit": 0,
+    "covered": 1
+   },
+   "H7": {
+    "category": "no change within 5 %",
+    "cat_hit": 0,
+    "brier": 0.16,
+    "value": 2,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H8": {
+    "category": "0.7 to 0.9",
+    "cat_hit": 0,
+    "brier": 0.203,
+    "value": 0.85,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H9": {
+    "category": "cap suppresses the change",
+    "cat_hit": 1,
+    "brier": 0.09,
+    "value": 20,
+    "value_hit": 0,
+    "covered": 1
+   }
+  },
+  "category_hits": "5/10",
+  "value_hits": "2/10",
+  "interval_coverage": "6/10",
+  "mean_brier": 0.225
+ },
+ "theorist_B_haiku.json": {
+  "per_question": {
+   "H1": {
+    "category": "inside",
+    "cat_hit": 0,
+    "brier": 0.25,
+    "value": 55,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H1b": {
+    "category": "higher",
+    "cat_hit": 1,
+    "brier": 0.16,
+    "value": 8,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H2": {
+    "category": "physics",
+    "cat_hit": 1,
+    "brier": 0.09,
+    "value": 12,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H3": {
+    "category": "0.4<=x<=0.6",
+    "cat_hit": 1,
+    "brier": 0.04,
+    "value": 5.2,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H4": {
+    "category": "size-independent",
+    "cat_hit": 0,
+    "brier": 0.562,
+    "value": 1.05,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H5": {
+    "category": "agree within 30 %",
+    "cat_hit": 1,
+    "brier": 0.36,
+    "value": 0.8,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H6": {
+    "category": "SiC precipitate favoured",
+    "cat_hit": 1,
+    "brier": 0.04,
+    "value": 0.5,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H7": {
+    "category": "no change within 5 %",
+    "cat_hit": 0,
+    "brier": 0.25,
+    "value": -3,
+    "value_hit": 0,
+    "covered": 0
+   },
+   "H8": {
+    "category": "below 0.7",
+    "cat_hit": 1,
+    "brier": 0.09,
+    "value": 0.55,
+    "value_hit": 1,
+    "covered": 1
+   },
+   "H9": {
+    "category": "cap suppresses the change",
+    "cat_hit": 1,
+    "brier": 0.16,
+    "value": 5,
+    "value_hit": 0,
+    "covered": 1
+   }
+  },
+  "category_hits": "7/10",
+  "value_hits": "4/10",
+  "interval_coverage": "5/10",
+  "mean_brier": 0.2
+ },
+ "baseline": {
+  "per_question": {
+   "H1": {
+    "category": "inside",
+    "cat_hit": 0,
+    "value": 57.5,
+    "value_hit": 0
+   },
+   "H1b": {
+    "category": "lower",
+    "cat_hit": 0,
+    "value": -30.0,
+    "value_hit": 0
+   },
+   "H2": {
+    "category": "fault",
+    "cat_hit": 0,
+    "value": 4.5,
+    "value_hit": 0
+   },
+   "H3": {
+    "category": "0.4<=x<=0.6",
+    "cat_hit": 1,
+    "value": 5.39,
+    "value_hit": 1
+   },
+   "H4": {
+    "category": "size-independent",
+    "cat_hit": 0,
+    "value": 1.0,
+    "value_hit": 0
+   },
+   "H5": {
+    "category": "agree within 30 %",
+    "cat_hit": 1,
+    "value": 1.0,
+    "value_hit": 0
+   },
+   "H7": {
+    "category": "no change within 5 %",
+    "cat_hit": 0,
+    "value": 0.0,
+    "value_hit": 0
+   },
+   "H8": {
+    "category": "above 0.9",
+    "cat_hit": 0,
+    "value": 1.0,
+    "value_hit": 0
+   }
+  },
+  "category_hits": "2/8",
+  "value_hits": "1/8"
+ }
+}

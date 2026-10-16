@@ -1,0 +1,131 @@
+{
+ "answers_seq": 128,
+ "rubric_seq": 122,
+ "per_question": {
+  "H1": {
+   "category": "above",
+   "category_as_mapped": "above",
+   "quote_verbatim": true,
+   "cat_hit": 0,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 0,
+   "outcome": "below",
+   "lookup_possible": null
+  },
+  "H1b": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 1,
+   "outcome": "higher",
+   "lookup_possible": null
+  },
+  "H2": {
+   "category": "physics",
+   "category_as_mapped": "physics",
+   "quote_verbatim": true,
+   "cat_hit": 1,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "physics",
+   "lookup_possible": null
+  },
+  "H3": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "0.4<=x<=0.6",
+   "lookup_possible": null
+  },
+  "H4": {
+   "category": "rises with length",
+   "category_as_mapped": "rises with length",
+   "quote_verbatim": true,
+   "cat_hit": 1,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 0,
+   "outcome": "rises with length",
+   "lookup_possible": null
+  },
+  "H5": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "agree within 30 %",
+   "lookup_possible": null
+  },
+  "H6": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "SiC precipitate favoured",
+   "lookup_possible": null
+  },
+  "H7": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 0,
+   "outcome": "increase",
+   "lookup_possible": null
+  },
+  "H8": {
+   "category": "below 0.7",
+   "category_as_mapped": "below 0.7",
+   "quote_verbatim": true,
+   "cat_hit": 1,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 1,
+   "outcome": "below 0.7",
+   "lookup_possible": "outcome is a median over published sintered-sample data"
+  },
+  "H9": {
+   "category": null,
+   "category_as_mapped": "cap suppresses the change",
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "cap suppresses the change",
+   "lookup_possible": "outcome is from an open 2026 preprint the Theorizer retrieved"
+  }
+ },
+ "answered": "4/10",
+ "category_hits_answered": "3/4",
+ "category_hits_forecast_only": "2/3",
+ "A_on_same_items": "1/4",
+ "B_on_same_items": "2/4",
+ "simulation_only_items": {
+  "H1": 0,
+  "H4": 1,
+  "H7": null
+ },
+ "open": {
+  "O1": "bound by more than 0.3 eV",
+  "O2": "close to the low-temperature metastable-film value (1.1 to 1.8 eV)",
+  "O3": null
+ }
+}

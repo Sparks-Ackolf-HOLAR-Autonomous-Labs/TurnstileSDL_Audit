@@ -1,0 +1,9 @@
+{
+ "max_papers_to_retrieve": 15,
+ "generation_objective": "accuracy-focused",
+ "do_qualified_novelty_evaluation": false,
+ "knowledge_cutoff_year": 2026,
+ "knowledge_cutoff_month": 1,
+ "theory_query": "Build theories of how biaxial strain (coherent growth on Si or Ge substrates) changes the in-plane and cross-plane lattice thermal conductivity of Si1-xGex films and of strained silicon and germanium, through changes in phonon group velocities, anharmonicity and scattering.",
+ "mission_statement": "The theories will be used to answer the following questions before the corresponding simulation results are seen. Address the mechanisms they depend on:\n\n\nH7. A Si0.5Ge0.5 film is grown coherently on Si(001) (biaxial in-plane\ncompression of about 2 %) and kappa is computed by Tersoff MD in-plane and\nacross the film, compared with relaxed bulk Si0.5Ge0.5.\nCategory for the cross-plane change at 300 K: \"increase\", \"decrease\",\n\"no change within 5 %\". Value: cross-plane change at 300 K in percent.\nState in \"theory\" what happens in-plane."
+}

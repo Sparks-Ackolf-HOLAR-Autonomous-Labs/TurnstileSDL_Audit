@@ -1,0 +1,9 @@
+{
+ "max_papers_to_retrieve": 15,
+ "generation_objective": "accuracy-focused",
+ "do_qualified_novelty_evaluation": false,
+ "knowledge_cutoff_year": 2026,
+ "knowledge_cutoff_month": 1,
+ "theory_query": "Build theories of how the choice of method (Tersoff and Stillinger-Weber empirical potentials in molecular dynamics, Green-Kubo or nonequilibrium MD, first-principles phonon Boltzmann transport with DFT force constants) changes the predicted lattice thermal conductivity of crystalline silicon, germanium and Si1-xGex, as a function of temperature.",
+ "mission_statement": "The theories will be used to answer the following questions before the corresponding simulation results are seen. Address the mechanisms they depend on:\n\n\nH5. Pure crystalline Si: Tersoff-1989 GPUMD homogeneous NEMD kappa versus\nalmaBTE (160.5 W/mK at 300 K, 40.5 W/mK at 1100 K).\nValue: ratio Tersoff/almaBTE at 300 K. Category for 1100 K:\n\"agree within 30 %\", \"Tersoff higher by more than 30 %\",\n\"Tersoff lower by more than 30 %\"."
+}

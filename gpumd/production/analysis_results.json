@@ -1,0 +1,1262 @@
+{
+ "committed_stages": [
+  "S0-alloy-crosscheck",
+  "S1-anchor-300K",
+  "S2-size-check",
+  "S3-T-sweep"
+ ],
+ "gates": {
+  "P1_linearity|Ge|1100": true,
+  "P1_linearity|Ge|300": false,
+  "P1_linearity|Ge|700": false,
+  "P1_linearity|Si|1100": true,
+  "P1_linearity|Si|300": false,
+  "P1_linearity|Si|700": false,
+  "P3_alloy_crosscheck": true
+ },
+ "points": {
+  "Ge|1100|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 15.084,
+    "n": 2,
+    "se": 3.03
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Ge"
+  },
+  "Ge|1100|8e-05|8x8x8": {
+   "Fe": 8e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 20.631,
+    "n": 2,
+    "se": 1.944
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Ge"
+  },
+  "Ge|300|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 107.219,
+    "n": 3,
+    "se": 7.36
+   },
+   "n_pass": 3,
+   "n_runs": 3,
+   "system": "Ge"
+  },
+  "Ge|300|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 89.216,
+    "n": 3,
+    "se": 3.802
+   },
+   "n_pass": 3,
+   "n_runs": 3,
+   "system": "Ge"
+  },
+  "Ge|700|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": null,
+   "n_pass": 1,
+   "n_runs": 2,
+   "system": "Ge"
+  },
+  "Ge|700|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 38.39,
+    "n": 2,
+    "se": 2.313
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Ge"
+  },
+  "SiGe|300|0.0002|8x8x8": {
+   "Fe": 0.0002,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 2.229,
+    "n": 3,
+    "se": 0.222
+   },
+   "n_pass": 3,
+   "n_runs": 3,
+   "system": "SiGe"
+  },
+  "Si|1100|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 47.993,
+    "n": 2,
+    "se": 19.298
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Si"
+  },
+  "Si|1100|4e-05|8x8x8": {
+   "Fe": 4e-05,
+   "T": 1100,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 53.992,
+    "n": 2,
+    "se": 3.573
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Si"
+  },
+  "Si|300|1e-05|16x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "estimate": null,
+   "n_pass": 1,
+   "n_runs": 2,
+   "system": "Si"
+  },
+  "Si|300|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 284.17,
+    "n": 3,
+    "se": 8.999
+   },
+   "n_pass": 3,
+   "n_runs": 3,
+   "system": "Si"
+  },
+  "Si|300|5e-06|8x8x8": {
+   "Fe": 5e-06,
+   "T": 300,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 422.579,
+    "n": 3,
+    "se": 66.572
+   },
+   "n_pass": 3,
+   "n_runs": 3,
+   "system": "Si"
+  },
+  "Si|700|1e-05|8x8x8": {
+   "Fe": 1e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 114.25,
+    "n": 2,
+    "se": 9.748
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Si"
+  },
+  "Si|700|2e-05|8x8x8": {
+   "Fe": 2e-05,
+   "T": 700,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "estimate": {
+    "kappa": 89.518,
+    "n": 2,
+    "se": 0.005
+   },
+   "n_pass": 2,
+   "n_runs": 2,
+   "system": "Si"
+  }
+ },
+ "predictions": {
+  "Ge|1100_agrees_BTE": true,
+  "Ge|300_agrees_BTE": false,
+  "Si_monotone_in_T": true,
+  "Si_ratio_300_1100_in_2.5_4.5": false,
+  "Si|1100_agrees_BTE": true,
+  "Si|300_agrees_BTE": false,
+  "Si|700_agrees_BTE": false,
+  "kSi300_gt_kGe300": true,
+  "kSi300_in_150_300": false
+ },
+ "restore": {
+  "P1_Ge_300": false,
+  "P1_Si_300": false,
+  "P2_size": null,
+  "S1_runs_ok": true,
+  "T_added": [
+   1100
+  ],
+  "condition_met": false
+ },
+ "runs": {
+  "Ge_T1100_fe4e-5_8x8x8_s55030": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.04,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 18.1142,
+   "lines": 3000,
+   "mean_T": 1100.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s55030",
+   "seed": 55030,
+   "sem": 3.0254,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe4e-5_8x8x8_s55031": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -4.12,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 12.0535,
+   "lines": 3000,
+   "mean_T": 1099.7,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s55031",
+   "seed": 55031,
+   "sem": 3.895,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s55032": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.03,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 18.6866,
+   "lines": 3000,
+   "mean_T": 1100.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s55032",
+   "seed": 55032,
+   "sem": 1.242,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T1100_fe8e-5_8x8x8_s55033": {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.13,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 22.5746,
+   "lines": 3000,
+   "mean_T": 1101.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s55033",
+   "seed": 55033,
+   "sem": 1.5822,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s55010": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.35,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 111.3624,
+   "lines": 5000,
+   "mean_T": 300.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s55010",
+   "seed": 55010,
+   "sem": 39.3336,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s55011": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -4.7,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 117.3802,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s55011",
+   "seed": 55011,
+   "sem": 16.3701,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe1e-5_8x8x8_s55012": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.77,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 92.9139,
+   "lines": 5000,
+   "mean_T": 300.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s55012",
+   "seed": 55012,
+   "sem": 25.272,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s55013": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.51,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 90.6003,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s55013",
+   "seed": 55013,
+   "sem": 11.9717,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s55014": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.0,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 82.0498,
+   "lines": 5000,
+   "mean_T": 299.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s55014",
+   "seed": 55014,
+   "sem": 10.1187,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T300_fe2e-5_8x8x8_s55015": {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.71,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 94.9989,
+   "lines": 5000,
+   "mean_T": 300.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s55015",
+   "seed": 55015,
+   "sem": 11.898,
+   "stage": "S1-anchor-300K",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s55026": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.34,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 21.9481,
+   "lines": 3000,
+   "mean_T": 700.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s55026",
+   "seed": 55026,
+   "sem": 6.4589,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T700_fe2e-5_8x8x8_s55027": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 5.01,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "kappa": 25.7506,
+   "lines": 3000,
+   "mean_T": 699.8,
+   "n_atoms": 4096,
+   "pass": false,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s55027",
+   "seed": 55027,
+   "sem": 11.0919,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s55028": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 2.78,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 40.7032,
+   "lines": 3000,
+   "mean_T": 700.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s55028",
+   "seed": 55028,
+   "sem": 6.1388,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "Ge_T700_fe4e-5_8x8x8_s55029": {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.35,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 36.0763,
+   "lines": 3000,
+   "mean_T": 699.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s55029",
+   "seed": 55029,
+   "sem": 3.7392,
+   "stage": "S3-T-sweep",
+   "system": "Ge"
+  },
+  "SiGe_T300_fe2e-4_8x8x8_s55001": {
+   "Fe_per_A": 0.0002,
+   "T_K": 300,
+   "a0_A": 5.5445,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "config_seed": 55001,
+   "drift_z": 0.52,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 2.1904,
+   "lines": 2000,
+   "mean_T": 299.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/SiGe_Tersoff_1989.txt",
+   "production_ns": 2.0,
+   "run_id": "SiGe_T300_fe2e-4_8x8x8_s55001",
+   "seed": 55001,
+   "sem": 0.3517,
+   "stage": "S0-alloy-crosscheck",
+   "system": "SiGe",
+   "x_ge": 0.5
+  },
+  "SiGe_T300_fe2e-4_8x8x8_s55002": {
+   "Fe_per_A": 0.0002,
+   "T_K": 300,
+   "a0_A": 5.5445,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "config_seed": 55002,
+   "drift_z": -0.25,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 1.8658,
+   "lines": 2000,
+   "mean_T": 299.7,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/SiGe_Tersoff_1989.txt",
+   "production_ns": 2.0,
+   "run_id": "SiGe_T300_fe2e-4_8x8x8_s55002",
+   "seed": 55002,
+   "sem": 0.2299,
+   "stage": "S0-alloy-crosscheck",
+   "system": "SiGe",
+   "x_ge": 0.5
+  },
+  "SiGe_T300_fe2e-4_8x8x8_s55003": {
+   "Fe_per_A": 0.0002,
+   "T_K": 300,
+   "a0_A": 5.5445,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "config_seed": 55003,
+   "drift_z": -0.23,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 2.6315,
+   "lines": 2000,
+   "mean_T": 299.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/SiGe_Tersoff_1989.txt",
+   "production_ns": 2.0,
+   "run_id": "SiGe_T300_fe2e-4_8x8x8_s55003",
+   "seed": 55003,
+   "sem": 0.2881,
+   "stage": "S0-alloy-crosscheck",
+   "system": "SiGe",
+   "x_ge": 0.5
+  },
+  "Si_T1100_fe2e-5_8x8x8_s55022": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -1.43,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 67.2913,
+   "lines": 3000,
+   "mean_T": 1099.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s55022",
+   "seed": 55022,
+   "sem": 8.3413,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T1100_fe2e-5_8x8x8_s55023": {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.95,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 28.6953,
+   "lines": 3000,
+   "mean_T": 1100.9,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s55023",
+   "seed": 55023,
+   "sem": 11.3805,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s55024": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.61,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 50.4186,
+   "lines": 3000,
+   "mean_T": 1100.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s55024",
+   "seed": 55024,
+   "sem": 5.6224,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T1100_fe4e-5_8x8x8_s55025": {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.17,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 57.5654,
+   "lines": 3000,
+   "mean_T": 1100.7,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s55025",
+   "seed": 55025,
+   "sem": 6.6446,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_16x8x8_s55016": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "drift_z": -0.06,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 286.9586,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 8192,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s55016",
+   "seed": 55016,
+   "sem": 21.681,
+   "stage": "S2-size-check",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_16x8x8_s55017": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "drift_z": 5.34,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": false,
+    "R4_physical": true
+   },
+   "kappa": 350.169,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 8192,
+   "pass": false,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s55017",
+   "seed": 55017,
+   "sem": 36.9427,
+   "stage": "S2-size-check",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s55007": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.09,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 270.9722,
+   "lines": 5000,
+   "mean_T": 300.2,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s55007",
+   "seed": 55007,
+   "sem": 42.566,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s55008": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.09,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 301.3664,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s55008",
+   "seed": 55008,
+   "sem": 26.2278,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe1e-5_8x8x8_s55009": {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.74,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 280.1706,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s55009",
+   "seed": 55009,
+   "sem": 42.4029,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe5e-6_8x8x8_s55004": {
+   "Fe_per_A": 5e-06,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.16,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 301.5265,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe5e-6_8x8x8_s55004",
+   "seed": 55004,
+   "sem": 57.3564,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe5e-6_8x8x8_s55005": {
+   "Fe_per_A": 5e-06,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 2.73,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 531.1178,
+   "lines": 5000,
+   "mean_T": 300.1,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe5e-6_8x8x8_s55005",
+   "seed": 55005,
+   "sem": 105.915,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T300_fe5e-6_8x8x8_s55006": {
+   "Fe_per_A": 5e-06,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -0.13,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 435.0928,
+   "lines": 5000,
+   "mean_T": 300.0,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 5.0,
+   "run_id": "Si_T300_fe5e-6_8x8x8_s55006",
+   "seed": 55006,
+   "sem": 107.698,
+   "stage": "S1-anchor-300K",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s55018": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.15,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 123.9984,
+   "lines": 3000,
+   "mean_T": 700.3,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s55018",
+   "seed": 55018,
+   "sem": 39.6708,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T700_fe1e-5_8x8x8_s55019": {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 0.93,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 104.5016,
+   "lines": 3000,
+   "mean_T": 699.8,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s55019",
+   "seed": 55019,
+   "sem": 21.8844,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s55020": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": 1.45,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 89.523,
+   "lines": 3000,
+   "mean_T": 698.5,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s55020",
+   "seed": 55020,
+   "sem": 17.0902,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  },
+  "Si_T700_fe2e-5_8x8x8_s55021": {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "drift_z": -2.41,
+   "gates": {
+    "R1_exit": true,
+    "R2_temperature": true,
+    "R3_no_runaway": true,
+    "R4_physical": true
+   },
+   "kappa": 89.5128,
+   "lines": 3000,
+   "mean_T": 699.6,
+   "n_atoms": 4096,
+   "pass": true,
+   "potential": "/home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 3.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s55021",
+   "seed": 55021,
+   "sem": 12.7861,
+   "stage": "S3-T-sweep",
+   "system": "Si"
+  }
+ },
+ "states": {
+  "Ge|1100": {
+   "bte_dft": 16.7,
+   "kappa": 17.86,
+   "se": 1.8
+  },
+  "Ge|300": {
+   "bte_dft": 57.1,
+   "kappa": 98.22,
+   "se": 4.14
+  },
+  "Si|1100": {
+   "bte_dft": 40.5,
+   "kappa": 50.99,
+   "se": 9.81
+  },
+  "Si|300": {
+   "bte_dft": 160.5,
+   "kappa": 353.37,
+   "se": 33.59
+  },
+  "Si|700": {
+   "bte_dft": 63.8,
+   "kappa": 101.88,
+   "se": 4.87
+  }
+ }
+}

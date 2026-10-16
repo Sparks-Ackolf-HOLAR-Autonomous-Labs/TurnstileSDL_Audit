@@ -1,0 +1,1142 @@
+{
+ "acceptance": {
+  "P1_linearity": "at each (system, T), 8x8x8: |k(Fe_low)-k(Fe_high)| <= 2*sqrt(SE_low^2+SE_high^2), SE as per_point",
+  "P2_size": "Si 300 K, Fe 1e-5: |k(16x8x8)-k(8x8x8)| <= 2*sqrt(SE^2+SE^2), SE as per_point",
+  "R1_exit": "exit status 0 and kappa.out has >= 90% of expected lines",
+  "R2_temperature": "mean production temperature within 2% of T",
+  "R3_no_runaway": "drift z = (mean of last 20% of retained series - mean of first 20%) / (run SEM*sqrt(2)) < 3",
+  "R4_physical": "0 < run value < 2000 W/mK"
+ },
+ "analysis": {
+  "per_point": "point = (system, T, Fe, cells). Estimate = mean of passing run values; SE = max(std over runs/sqrt(n), sqrt(sum run SEM^2)/n) (seed SE floored at the pooled within-run SEM); FAILED if fewer than 3 runs pass (2 for the 3-run size point)",
+  "per_run": "kx = kx_in + kx_out per 1000-step interval; discard first 20%; 10 contiguous blocks; run value = mean of block means; run SEM = std(block means)/sqrt(10)",
+  "per_state": "state = (system, T). Reported kappa = mean of the two Fe point estimates; SE = 0.5*sqrt(SE1^2+SE2^2)"
+ },
+ "campaign": "gpumd-endpoint-v2-2026-09-29",
+ "code": {
+  "binary": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/src/gpumd",
+  "engine": "GPUMD master aab525f1 (same commit as v1), built on CHPC with CUDA 12.8.1 as a fat binary for sm_75/80/86/89/90/120 (+compute_90 PTX); build log gpumd/production_v2/BUILD.md",
+  "potential_files": "GPUMD potentials/tersoff/{Si,Ge}_Tersoff_1989.txt, identical content to v1 (sha256 recorded in BUILD.md)"
+ },
+ "cost_estimate": {
+  "gpu_h_at_GB10_rate_4min_per_ns": 61.3,
+  "ns_equiv_4096_atoms": 920.0
+ },
+ "deviation_policy": [
+  "requeue after preemption/node failure is declared protocol, not a deviation; a run failing R1 for any other infrastructure reason may be rerun once with the same seed, logged on the ledger",
+  "any change to Fe, length, seeds, gates, or stages after this commitment is a deviation with its own ledger entry BEFORE the affected run starts, reported in the paper",
+  "each stage's raw outputs are copied into the repo, hashed, and their Merkle root appended to the ledger BEFORE the stage is analysed; commit refuses git-ignored evidence"
+ ],
+ "n_runs": 63,
+ "paper": "P2 (verifiable revision), own materials experiment, v2",
+ "predictions": {
+  "stated_before_outcomes": [
+   "P1 passes at 300 K for both elements (v1 post-hoc SE-floor variant passed there)",
+   "k_Si(300 K, Fe 1e-5) within 20% of v1's 284 W/mK",
+   "Tersoff/BTE-DFT ratio at 300 K between 1.4 and 2.2 for both elements (v1: about 1.6-1.8)",
+   "Tersoff and BTE-DFT agree within 30% at 1100 K for both elements",
+   "k(300) > k(700) > k(1100) for both elements"
+  ],
+  "status": "reported pass/fail; not gating"
+ },
+ "protocol": {
+  "driving_direction": "x (kappa = kx_in + kx_out)",
+  "execution": "CHPC guest GPU partitions only (notchpeak-gpu-guest / granite-gpu-guest, account owner-gpu-guest); one SLURM array per stage, one run per task, 1 GPU per task; grn061 / sparks-gpu-grn and the DGX are not used",
+  "hardware_heterogeneity": "whatever guest GPU SLURM assigns; the GPU model is recorded per run (nvidia-smi) and reported, never gated",
+  "model": "diamond conventional cells (gpumd/make_model.py)",
+  "npt_equilibration": "ensemble npt_ber T T 100 0 100 1000 for 100 ps",
+  "nvt_equilibration": "ensemble nvt_nhc T T 100 for 50 ps",
+  "preemption": "a preempted or node-failed task is requeued and restarts from scratch with the same seed; attempts are counted per run and reported",
+  "production": "ensemble nvt_nhc T T 100 + compute_hnemd 1000 Fe 0 0 + dump_thermo 10000, for production_ns",
+  "stage_order": [
+   "V1-anchor-300K",
+   "V2-size-check",
+   "V3-highT"
+  ],
+  "time_step_fs": 1,
+  "velocity": "velocity T seed <seed>"
+ },
+ "purpose": "bulk Tersoff-1989 kappa of pure Si and Ge via HNEMD at adequate power, to decide per temperature whether the scope-limit-alloys-2026-09-27 endpoint exclusion is lifted",
+ "restore_rule": {
+  "T300": "all four V1 points have >= 3 passing runs AND P1 Si 300 AND P1 Ge 300 AND P2 -> endpoint domain restored at 300 K",
+  "T700_T1100": "each of 700 K and 1100 K is judged independently: all four points at that T have >= 3 passing runs AND P1 passes for both Si and Ge -> endpoint domain restored at that T",
+  "if_condition_fails": "that temperature stays scope-limited; a ledger entry records the failing gate; the negative result is published, not rerun silently",
+  "lifts": "scope-limit-alloys-2026-09-27 (endpoint part only, per T)",
+  "op": "restore",
+  "scope_label": "every restored state carries the label 'Tersoff-1989-parented' plus its measured ratio to the BTE-DFT party (Si 160.5/63.8/40.5, Ge 57.1/25.7/16.7 W/mK at 300/700/1100 K); the ratio is reported, not gating: the gates decide numerical validity of the Tersoff-family number, the label carries its known method bias into every downstream claim"
+ },
+ "runs": [
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56001",
+   "seed": 56001,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56002",
+   "seed": 56002,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56003",
+   "seed": 56003,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56004",
+   "seed": 56004,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_8x8x8_s56005",
+   "seed": 56005,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56006",
+   "seed": 56006,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56007",
+   "seed": 56007,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56008",
+   "seed": 56008,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56009",
+   "seed": 56009,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe2e-5_8x8x8_s56010",
+   "seed": 56010,
+   "stage": "V1-anchor-300K",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56011",
+   "seed": 56011,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56012",
+   "seed": 56012,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56013",
+   "seed": 56013,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56014",
+   "seed": 56014,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe1e-5_8x8x8_s56015",
+   "seed": 56015,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56016",
+   "seed": 56016,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56017",
+   "seed": 56017,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56018",
+   "seed": 56018,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56019",
+   "seed": 56019,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 300,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Ge_T300_fe2e-5_8x8x8_s56020",
+   "seed": 56020,
+   "stage": "V1-anchor-300K",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "n_atoms": 8192,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56021",
+   "seed": 56021,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "n_atoms": 8192,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56022",
+   "seed": 56022,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 300,
+   "a0_A": 5.432,
+   "cells": [
+    16,
+    8,
+    8
+   ],
+   "n_atoms": 8192,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 20.0,
+   "run_id": "Si_T300_fe1e-5_16x8x8_s56023",
+   "seed": 56023,
+   "stage": "V2-size-check",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56024",
+   "seed": 56024,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56025",
+   "seed": 56025,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56026",
+   "seed": 56026,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56027",
+   "seed": 56027,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 1e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe1e-5_8x8x8_s56028",
+   "seed": 56028,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56029",
+   "seed": 56029,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56030",
+   "seed": 56030,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56031",
+   "seed": 56031,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56032",
+   "seed": 56032,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T700_fe2e-5_8x8x8_s56033",
+   "seed": 56033,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56034",
+   "seed": 56034,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56035",
+   "seed": 56035,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56036",
+   "seed": 56036,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56037",
+   "seed": 56037,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe2e-5_8x8x8_s56038",
+   "seed": 56038,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56039",
+   "seed": 56039,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56040",
+   "seed": 56040,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56041",
+   "seed": 56041,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56042",
+   "seed": 56042,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.432,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Si_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Si_T1100_fe4e-5_8x8x8_s56043",
+   "seed": 56043,
+   "stage": "V3-highT",
+   "system": "Si"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56044",
+   "seed": 56044,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56045",
+   "seed": 56045,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56046",
+   "seed": 56046,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56047",
+   "seed": 56047,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 2e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe2e-5_8x8x8_s56048",
+   "seed": 56048,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56049",
+   "seed": 56049,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56050",
+   "seed": 56050,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56051",
+   "seed": 56051,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56052",
+   "seed": 56052,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 700,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T700_fe4e-5_8x8x8_s56053",
+   "seed": 56053,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56054",
+   "seed": 56054,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56055",
+   "seed": 56055,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56056",
+   "seed": 56056,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56057",
+   "seed": 56057,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 4e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe4e-5_8x8x8_s56058",
+   "seed": 56058,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56059",
+   "seed": 56059,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56060",
+   "seed": 56060,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56061",
+   "seed": 56061,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56062",
+   "seed": 56062,
+   "stage": "V3-highT",
+   "system": "Ge"
+  },
+  {
+   "Fe_per_A": 8e-05,
+   "T_K": 1100,
+   "a0_A": 5.657,
+   "cells": [
+    8,
+    8,
+    8
+   ],
+   "n_atoms": 4096,
+   "potential": "/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/gpumd_v2/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt",
+   "production_ns": 10.0,
+   "run_id": "Ge_T1100_fe8e-5_8x8x8_s56063",
+   "seed": 56063,
+   "stage": "V3-highT",
+   "system": "Ge"
+  }
+ ],
+ "supersedes_nothing": "v1 (gpumd-endpoint-production-2026-09-28) stays closed with its negative verdict (ledger seq 18); v1 outputs are never pooled with v2"
+}

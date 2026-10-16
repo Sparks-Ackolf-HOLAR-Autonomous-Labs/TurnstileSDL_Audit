@@ -1,0 +1,51 @@
+{
+ "answers_seq": 140,
+ "registration_seq": 136,
+ "rubric_seq": 122,
+ "per_question": {
+  "H1b": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 0,
+   "B_hit": 1,
+   "outcome": "higher"
+  },
+  "H5": {
+   "category": "Tersoff higher by more than 30%",
+   "category_as_mapped": "Tersoff higher by more than 30%",
+   "quote_verbatim": true,
+   "cat_hit": 0,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "agree within 30 %"
+  },
+  "H6": {
+   "category": null,
+   "category_as_mapped": null,
+   "quote_verbatim": false,
+   "cat_hit": null,
+   "value_hit": null,
+   "A_hit": 1,
+   "B_hit": 1,
+   "outcome": "SiC precipitate favoured"
+  },
+  "H7": {
+   "category": "decrease",
+   "category_as_mapped": "decrease",
+   "quote_verbatim": true,
+   "cat_hit": 0,
+   "value_hit": 0,
+   "A_hit": 0,
+   "B_hit": 0,
+   "outcome": "increase"
+  }
+ },
+ "answered": "2/4",
+ "category_hits_answered": "0/2",
+ "A_on_same_items": "1/2",
+ "B_on_same_items": "1/2"
+}

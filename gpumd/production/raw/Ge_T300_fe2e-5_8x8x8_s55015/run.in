@@ -1,0 +1,11 @@
+potential   /home/sparksspark/mat_theory_gpumd/GPUMD/potentials/tersoff/Ge_Tersoff_1989.txt
+velocity    300 seed 55015
+time_step   1
+ensemble    npt_ber 300 300 100 0 100 1000
+run         100000
+ensemble    nvt_nhc 300 300 100
+run         50000
+ensemble    nvt_nhc 300 300 100
+compute_hnemd 1000 2e-05 0 0
+dump_thermo 10000
+run         5000000

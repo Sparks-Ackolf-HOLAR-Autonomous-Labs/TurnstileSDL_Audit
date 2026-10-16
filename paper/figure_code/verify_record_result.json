@@ -1,0 +1,567 @@
+{
+ "checks": [
+  {
+   "campaign": "ledger",
+   "check": "hash chain over 151 entries",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "cited entries (prereg_seq, raw_seq, registration_seq, criteria_seq, rests_on) exist, precede the citing entry and have the expected kind",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "design endpoint_campaign_design.json re-hash (ledger seq 2)",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S0-alloy-crosscheck: 21 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S0-alloy-crosscheck: Merkle root = ledger seq 8",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S1-anchor-300K: 84 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S1-anchor-300K: Merkle root = ledger seq 15",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S2-size-check: 14 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S2-size-check: Merkle root = ledger seq 16",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S3-T-sweep: 112 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "batch S3-T-sweep: Merkle root = ledger seq 17",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v1",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "design endpoint_v2_design.json re-hash (ledger seq 30)",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V2-size-check: 27 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V2-size-check: Merkle root = ledger seq 41",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V1-anchor-300K: 180 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V1-anchor-300K: Merkle root = ledger seq 42",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V3-highT: 360 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "batch V3-highT: Merkle root = ledger seq 50",
+   "pass": true
+  },
+  {
+   "campaign": "endpoint v2",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "design sizefree_design.json re-hash (ledger seq 85)",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "batch H1-300K: 270 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "batch H1-300K: Merkle root = ledger seq 87",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "batch H2-highT: 324 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "batch H2-highT: Merkle root = ledger seq 88",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "analysis results re-hash (seq 89)",
+   "pass": true
+  },
+  {
+   "campaign": "size-free HNEMD",
+   "check": "order: design < raw < analysis < decision",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "design check300_design.json re-hash (ledger seq 91)",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "batch C300: 72 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "batch C300: Merkle root = ledger seq 96",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "analysis results re-hash (seq 97)",
+   "pass": true
+  },
+  {
+   "campaign": "300 K size check",
+   "check": "order: design < raw < analysis < decision",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "design level300_design.json re-hash (ledger seq 99)",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "batch L1: 252 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "batch L1: Merkle root = ledger seq 100",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "analysis results re-hash (seq 101)",
+   "pass": true
+  },
+  {
+   "campaign": "300 K level",
+   "check": "order: design < raw < analysis < decision",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "design gk300_design.json re-hash (ledger seq 107)",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "batch K1: 342 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "batch K1: Merkle root = ledger seq 111",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "batch K2-box12: 216 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "batch K2-box12: Merkle root = ledger seq 113",
+   "pass": true
+  },
+  {
+   "campaign": "300 K Green-Kubo",
+   "check": "pre-registration precedes first raw commit",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "design sigec_design.json re-hash (ledger seq 46)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "design m1c_design.json re-hash (ledger seq 53)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "batch M1-mace-gate: 20 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "batch M1-mace-gate: Merkle root = ledger seq 47",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "batch M1c-converged: 102 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "batch M1c-converged: Merkle root = ledger seq 54",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "gate-failure summary re-hash (seq 48)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "analysis results re-hash (seq 49)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "rerun summary re-hash (seq 55)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "rerun results re-hash (seq 55)",
+   "pass": true
+  },
+  {
+   "campaign": "SiGeC",
+   "check": "order: design < raw < gate < analysis < re-design < raw < decision",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "design md_design.json re-hash (ledger seq 58)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "6 registered input files re-hash (seq 58)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD: 56 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD: Merkle root = ledger seq 59",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "md_results.json re-hash (seq 61)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "order: design < raw < decision (seq 58, 59, 61)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "design x03_design.json re-hash (ledger seq 78)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "7 registered input files re-hash (seq 78)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-x03: 40 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-x03: Merkle root = ledger seq 79",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "x03_results.json re-hash (seq 80)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "order: design < raw < decision (seq 78, 79, 80)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "design r30_design.json re-hash (ledger seq 103)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "9 registered input files re-hash (seq 103)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-r30: 40 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-r30: Merkle root = ledger seq 104",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "r30_results.json re-hash (seq 105)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "order: design < raw < decision (seq 103, 104, 105)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "design r50_design.json re-hash (ledger seq 106)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "9 registered input files re-hash (seq 106)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-r50: 20 raw files re-hash and tracked",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "batch embedded-SiC-MD-r50: Merkle root = ledger seq 108",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "r50_results.json re-hash (seq 110)",
+   "pass": true
+  },
+  {
+   "campaign": "small SiC",
+   "check": "order: design < raw < decision (seq 106, 108, 110)",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "criteria file re-hash (commitment entry)",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "3 exceptional labels cite a criteria commitment that precedes them",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "retrospective label seq 119 (retro-exceptional-ge-corner): replication < raw < decision (seq [19, 26, 27, 28, 29])",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "retrospective label seq 120 (retro-exceptional-amorphous-probes): recorded as resolved without a replicate",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "retrospective label seq 121 (retro-exceptional-si-rich-zone): replication < raw < decision (seq [62, 69, 70])",
+   "pass": true
+  },
+  {
+   "campaign": "exceptional labels",
+   "check": "no downweight or value change targets a value with an unresolved exceptional label",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "brief re-hash (seq 122)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "rubric re-hash (seq 122)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "published outcome key = hash committed before the answers (seq 122)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "answer theorist_A_sonnet.json re-hash (seq 123)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "answer theorist_B_haiku.json re-hash (seq 123)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "grades re-hash (seq 124)",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "order: registration < answers < grades",
+   "pass": true
+  },
+  {
+   "campaign": "ai-theorist",
+   "check": "outcome key first committed after the answer entry",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "per-entry signatures: 151 of 151 entries signed and valid (key in ledger_allowed_signers)",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "RFC 3161 anchor of seq 99 head (Oct  4 15:57:56 2026 GMT)",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "RFC 3161 anchor of seq 130 head (Oct  9 18:06:32 2026 GMT)",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "signature file lists no entry missing from the ledger; seq numbers run 0 to N-1",
+   "pass": true
+  },
+  {
+   "campaign": "ledger",
+   "check": "at least one RFC 3161 anchor present",
+   "pass": true
+  }
+ ],
+ "timing": {
+  "ledger": {
+   "entries": 151,
+   "seconds": 0.0011949590407311916
+  },
+  "endpoint v1": {
+   "raw_files": 231,
+   "batches": 4,
+   "seconds": 0.26263613207265735
+  },
+  "endpoint v2": {
+   "raw_files": 567,
+   "batches": 3,
+   "seconds": 0.6381904748268425
+  },
+  "size-free HNEMD": {
+   "raw_files": 594,
+   "batches": 2,
+   "seconds": 0.45788021897897124
+  },
+  "300 K size check": {
+   "raw_files": 72,
+   "batches": 1,
+   "seconds": 0.06372748594731092
+  },
+  "300 K level": {
+   "raw_files": 252,
+   "batches": 1,
+   "seconds": 0.18740337202325463
+  },
+  "300 K Green-Kubo": {
+   "raw_files": 558,
+   "batches": 2,
+   "seconds": 0.4148133140988648
+  },
+  "SiGeC": {
+   "raw_files": 122,
+   "batches": 2,
+   "seconds": 0.11198136396706104
+  },
+  "small SiC": {
+   "raw_files": 156,
+   "batches": 4,
+   "seconds": 0.18788210675120354
+  },
+  "exceptional labels": {
+   "prospective": 0,
+   "retrospective": 3,
+   "criteria_seq": 118,
+   "seconds": 7.815985009074211e-05
+  },
+  "ai-theorist": {
+   "registration_seq": 122,
+   "seconds": 0.006321996916085482
+  },
+  "signatures": {
+   "seconds": 0.6767930616624653,
+   "git_ignore_check": true
+  }
+ },
+ "total_seconds": 3.0135190756991506,
+ "host": "aarch64",
+ "os": "Linux"
+}

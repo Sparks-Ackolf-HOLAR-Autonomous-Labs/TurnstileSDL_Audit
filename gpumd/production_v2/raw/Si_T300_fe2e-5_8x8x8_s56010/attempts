@@ -1,0 +1,5 @@
+2026-09-29T08:46:54Z job=15890777 restart=0 host=notch168
+  pre-restart cleanup of first-submission leftovers 2026-09-29T09:12:00Z
+2026-09-29T09:16:44Z job=15890921 restart=0 host=notch299
+  cuda_init_fail (gpumd, exit 1) host=notch299
+2026-09-29T10:14:50Z job=15891289 restart=0 host=notch367

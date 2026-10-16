@@ -1,0 +1,5 @@
+2026-09-29T08:47:11Z job=15890785 restart=0 host=notch168
+  pre-restart cleanup of first-submission leftovers 2026-09-29T09:11:59Z
+2026-09-29T09:16:44Z job=15890927 restart=0 host=notch299
+  cuda_init_fail (nvidia-smi) host=notch299
+2026-09-29T11:15:27Z job=15891451 restart=0 host=notch368
