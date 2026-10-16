@@ -39,6 +39,16 @@ SOURCE_COLOURS = {
     "starrydata": "#D55E00",        # digitized curves (Starrydata2)
     "law": "#000000",               # fitted law
 }
+# Physics data are drawn in gold and brown in every figure (Tersoff MD and MACE
+# results; brown marks the second driving force, the second estimator or the
+# validated rerun). Verification categories use one fixed pair in every
+# figure: blue for the first category (registered step, outside edit, layer 1)
+# and reddish purple for the second (gate failure, key holder, layer 2).
+PHYS = "#E69F00"
+PHYS_DARK = "#8A5A00"
+VERIFY_A = "#0072B2"
+VERIFY_B = "#CC79A7"
+
 SOURCE_NAMES = {
     "literature": "published values",
     "tersoff_md": "Tersoff MD",

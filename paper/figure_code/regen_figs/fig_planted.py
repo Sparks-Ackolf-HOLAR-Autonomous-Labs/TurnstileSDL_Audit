@@ -27,26 +27,31 @@ SHORT = {  # plain labels for the 11 kinds, same order as plant_and_verify.py
     7: "signature forged or key swapped",
     8: "decision cites a later registration",
     9: "exceptional value downweighted",
-    10: "AI-theorist answers out of order",
+    10: "theorist answers recorded out of order",
     11: "correction beyond declared reach",
 }
-MODEL_COL = {"outside edit": "#0072B2", "key holder": "#D55E00"}
+# verification pair of the paper (the same two colours in every figure)
+MODEL_COL = {"outside edit": S.VERIFY_A, "key holder": S.VERIFY_B}
 
 kinds = {}
 for m in R["mutations"]:
     kinds.setdefault(m["no"], []).append(m)
 
+nmax = max(len(v) for v in kinds.values())
 fig = plt.figure(figsize=(S.COL, 2.6), layout="none")
-ax = fig.add_axes([0.6, 0.02, 0.38, 0.86])
+ax = fig.add_axes([0.6, 0.02, 0.30, 0.86])
 for row, no in enumerate(sorted(kinds)):
     for j, m in enumerate(kinds[no]):
         c = MODEL_COL[m["model"]]
         ax.scatter([j], [row], s=34, zorder=3, linewidth=1.0,
                    facecolor=c if m["caught"] else "white", edgecolor=c)
+    caught = sum(m["caught"] for m in kinds[no])
+    ax.text(nmax - 0.1, row, f"{caught}/{len(kinds[no])}", va="center", ha="left",
+            fontsize=7, clip_on=False)
 ax.set_yticks(range(len(kinds)))
 ax.set_yticklabels([SHORT[k] for k in sorted(kinds)])
 ax.invert_yaxis()
-ax.set_xlim(-0.6, max(len(v) for v in kinds.values()) - 0.4)
+ax.set_xlim(-0.6, nmax - 0.4)
 ax.set_xticks([])
 for sp in ("top", "right", "bottom"):
     ax.spines[sp].set_visible(False)

@@ -53,6 +53,7 @@ Each figure is drawn by one script at its print size and written to `paper/figur
 | `fig_endpoint_campaign` | `python3 paper/figure_code/regen_figs/fig_endpoint_campaign.py` |
 | `fig_planted` | `python3 paper/figure_code/regen_figs/fig_planted.py` |
 | `fig_record_schematic` | `python3 paper/figure_code/regen_figs/fig_record_schematic.py` |
+| `fig_sigec_carbon` | `python3 paper/figure_code/regen_figs/fig_sigec_carbon.py` |
 | `fig_sigec_timeline` | `python3 paper/figure_code/regen_figs/fig_sigec_timeline.py` |
 | `fig_sizefree` | `python3 paper/figure_code/regen_figs/fig_sizefree.py` |
 | `fig_stack_cost` | `python3 paper/figure_code/regen_figs/fig_stack_cost.py` |

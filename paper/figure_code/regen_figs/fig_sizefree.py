@@ -32,10 +32,10 @@ def level(T):
     return M300 + (M_HI - M300) * (T - 300) / 400 if T < 700 else M_HI
 
 
-MD = S.SOURCE_COLOURS["tersoff_md"]
-GK = "#8A5A00"
+MD = S.PHYS
+GK = S.PHYS_DARK
 xs = np.linspace(0.05, 0.90, 200)
-fig, axes = plt.subplots(1, 3, figsize=(S.FULL, 2.25), sharey=True)
+fig, axes = plt.subplots(1, 3, figsize=(S.FULL, 2.4), sharey=True)
 for ax, T in zip(axes, (300, 700, 1100)):
     ax.plot(xs, law(xs, T), color=S.GREY, ls="--", lw=1.0)
     ax.plot(xs, level(T) * law(xs, T), color=S.SOURCE_COLOURS["law"], lw=1.2)
@@ -43,9 +43,15 @@ for ax, T in zip(axes, (300, 700, 1100)):
         if p["T"] != T:
             continue
         used = T != 300 and p["in_law_domain"]
-        ax.errorbar(p["x"], p["kappa"], yerr=2 * p["se"], fmt="o", ms=4,
+        mk = "o" if p["in_law_domain"] else "D"
+        ax.errorbar(p["x"], p["kappa"], yerr=2 * p["se"], fmt=mk, ms=4,
                     color=MD, mfc=MD if used else "white", mew=1.0,
                     capsize=1.5, elinewidth=0.8, zorder=3)
+        if not p["in_law_domain"]:
+            ax.annotate("outside validity\ndomain", (p["x"], p["kappa"] + 2 * p["se"]),
+                        xytext=(p["x"] - 0.12, p["kappa"] + 2 * p["se"] + 2.3),
+                        fontsize=7, ha="center", va="bottom",
+                        arrowprops=dict(arrowstyle="-", lw=0.6, color=S.INK))
     if T == 300:
         for k, v in G["gk_points_300K_box12"].items():
             x = float(k.split("_")[0][1:])
@@ -60,8 +66,8 @@ handles = [
     Line2D([], [], marker="o", ls="", color=MD, ms=4, label="HNEMD, used by the rule"),
     Line2D([], [], marker="o", ls="", color=MD, mfc="white", ms=4, label="HNEMD, set aside by the rule"),
     Line2D([], [], marker="s", ls="", color=GK, ms=4, label="Green-Kubo, third registration"),
-    Line2D([], [], color=S.GREY, ls="--", lw=1.0, label="law before"),
-    Line2D([], [], color="k", lw=1.2, label="law after"),
+    Line2D([], [], color=S.GREY, ls="--", lw=1.0, label="law, box-length level"),
+    Line2D([], [], color="k", lw=1.2, label="law, registered level"),
 ]
-axes[1].legend(handles=handles, loc="upper left", fontsize=6.5, handlelength=1.6)
+axes[1].legend(handles=handles, loc="upper left", fontsize=7, handlelength=1.6)
 S.save(fig, "fig_sizefree")

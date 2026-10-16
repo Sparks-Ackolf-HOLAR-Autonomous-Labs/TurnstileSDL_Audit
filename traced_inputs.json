@@ -17,6 +17,12 @@
    "paper/figure_code/regen_figs/fig_record_schematic.py",
    "paper/figure_code/regen_figs/paper_fig_style.py"
   ],
+  "paper/figure_code/regen_figs/fig_sigec_carbon.py": [
+   "nano_sigec/m1/m1_summary.json",
+   "nano_sigec/m1c/m1c_summary.json",
+   "paper/figure_code/regen_figs/fig_sigec_carbon.py",
+   "paper/figure_code/regen_figs/paper_fig_style.py"
+  ],
   "paper/figure_code/regen_figs/fig_sigec_timeline.py": [
    "paper/figure_code/regen_figs/fig_sigec_timeline.py",
    "paper/figure_code/regen_figs/paper_fig_style.py",
@@ -2677,9 +2683,7 @@
    "phase_c/anchors/tsa.crt",
    "phase_c/ledger_allowed_signers",
    "phase_c/ledger_campaign.jsonl",
-   "phase_c/ledger_signatures.jsonl",
-   "pilot/src/ledger.py",
-   "pilot/src/ledger_sign.py"
+   "phase_c/ledger_signatures.jsonl"
   ]
  }
 }
